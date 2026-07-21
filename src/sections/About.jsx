@@ -12,25 +12,24 @@ const BLOCKS = [
     tag: '01',
     title: 'Notre Mission',
     paras: [
-      "Chez Jëftech, nous croyons profondément que la technologie n'est pas simplement un outil, mais un moteur de transformation qui peut améliorer et simplifier la vie de chacun. Notre mission est de concevoir des solutions numériques innovantes et accessibles, qui répondent aux besoins spécifiques de chaque client — qu'il s'agisse de particuliers, d'entreprises ou d'organisations.",
-      "Nous nous engageons à développer des outils technologiques qui fluidifient le quotidien, tout en stimulant la productivité et en ouvrant la voie à de nouvelles opportunités. Notre approche est centrée sur la création de solutions sur mesure qui s'adaptent aux exigences d'un monde en constante évolution, en veillant à ce que la technologie soit non seulement efficace, mais aussi intuitive et accessible à tous.",
-      "Chaque projet que nous entreprenons est une opportunité de réinventer l'interaction avec la technologie, en apportant des réponses concrètes aux défis modernes. À travers nos services, nous aspirons à rendre la technologie plus humaine, plus intuitive et plus puissante, tout en anticipant les besoins futurs de nos clients.",
+      "Trop d'entreprises se contentent d'un site qui « fait le job » sans jamais leur rapporter un seul client. Chez Jëftech, on part de l'inverse : à quoi doit servir votre projet, et comment le rendre vraiment utile au quotidien.",
+      "On conçoit des sites et des applications pensés pour vos utilisateurs réels — pas pour cocher des cases. Rapides, clairs, agréables à utiliser, et surtout capables de générer des résultats concrets : plus de contacts, plus de ventes, moins de tâches manuelles.",
     ],
   },
   {
     tag: '02',
     title: 'Notre Histoire',
     paras: [
-      "Jëftech est le fruit de la collaboration de quatre associés visionnaires, unis par une passion commune pour la technologie. Polyvalents et complémentaires, nous partageons depuis toujours la conviction que la technologie peut transformer le quotidien et ouvrir de nouvelles perspectives.",
-      "Après avoir acquis une solide expérience à travers divers projets techniques, nous avons décidé de mettre nos compétences et notre créativité au service d'une ambition commune : créer une entreprise capable de fournir des solutions numériques innovantes, adaptées aux besoins du monde moderne. C'est ainsi qu'est née Jëftech.",
+      "Jëftech est née d'un constat partagé par quatre amis développeurs : à Dakar comme ailleurs, beaucoup de porteurs de projets ont d'excellentes idées mais peinent à trouver une équipe technique fiable, qui écoute vraiment et livre ce qui était promis.",
+      "On a décidé de devenir cette équipe. Chacun de nous touche à tout — code, design, gestion de projet — ce qui nous rend rapides et polyvalents. Aujourd'hui, on accompagne aussi bien des particuliers avec une première idée que des entreprises qui veulent passer à l'échelle.",
     ],
   },
   {
     tag: '03',
     title: 'Notre Expertise',
     paras: [
-      "Chez Jëftech, nous combinons une expertise technique pointue avec une vision créative et innovante pour offrir des solutions numériques adaptées aux besoins de nos clients. Notre savoir-faire repose sur l'expérience acquise dans le développement d'applications mobiles, la création de plateformes web et la gestion de projets numériques complexes.",
-      "Grâce à notre capacité à anticiper les tendances technologiques et à comprendre les besoins spécifiques de chaque client, nous transformons des idées en solutions performantes et évolutives. Nous mettons l'accent sur la qualité, la sécurité et l'innovation dans chaque projet que nous entreprenons.",
+      "On construit des sites vitrines, des boutiques en ligne, des plateformes sur mesure et des applications mobiles iOS et Android. On intègre aussi les paiements (carte, mobile money) et on assure l'hébergement, pour que vous ayez un seul interlocuteur du début à la fin.",
+      "Notre différence, c'est le soin du détail : un code propre que d'autres développeurs pourront reprendre, des interfaces testées sur de vrais appareils, et une attention constante à la vitesse et à la sécurité. Ce sont ces détails qui font qu'un produit dure.",
     ],
   },
 ]

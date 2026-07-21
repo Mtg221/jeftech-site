@@ -9,7 +9,6 @@ import Testimonials from './sections/Testimonials.jsx'
 import Contact from './sections/Contact.jsx'
 import Booking from './sections/Booking.jsx'
 import Footer from './components/Footer.jsx'
-import './styles/sections.css'
 
 export default function App() {
   return (
