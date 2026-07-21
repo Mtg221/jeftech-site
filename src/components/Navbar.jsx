@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Wordmark from './Wordmark.jsx'
-import { NAV_LINKS, CALENDLY_URL } from '../config.js'
+import { NAV_LINKS } from '../config.js'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -27,12 +27,12 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a className="btn btn-primary nav__cta-mobile" href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
+          <a className="btn btn-primary nav__cta-mobile" href="#booking" onClick={() => setOpen(false)}>
             Prendre RDV
           </a>
         </nav>
 
-        <a className="btn btn-primary nav__cta" href={CALENDLY_URL} target="_blank" rel="noreferrer">
+        <a className="btn btn-primary nav__cta" href="#booking">
           Prendre RDV
         </a>
 

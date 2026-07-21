@@ -1,5 +1,4 @@
 import useReveal from '../hooks/useReveal.js'
-import { CALENDLY_URL } from '../config.js'
 
 const REASONS = [
   {
@@ -34,7 +33,7 @@ export default function WhyUs() {
             Beaucoup savent livrer un site. Peu prennent le temps de comprendre votre métier
             avant d'écrire la première ligne. C'est là que tout se joue.
           </p>
-          <a className="btn btn-primary why__cta" href={CALENDLY_URL} target="_blank" rel="noreferrer">
+          <a className="btn btn-primary why__cta" href="#booking">
             Discutons de votre projet
           </a>
         </aside>

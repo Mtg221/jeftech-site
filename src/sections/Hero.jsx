@@ -1,4 +1,3 @@
-import { CALENDLY_URL } from '../config.js'
 import { IconArrow } from '../components/Icons.jsx'
 
 export default function Hero() {
@@ -21,7 +20,7 @@ export default function Hero() {
             performent et impressionnent.
           </p>
           <div className="hero__cta">
-            <a className="btn btn-primary" href={CALENDLY_URL} target="_blank" rel="noreferrer">
+            <a className="btn btn-primary" href="#booking">
               Réserver un appel gratuit <IconArrow />
             </a>
             <a className="btn btn-outline" href="#services">Voir nos services</a>
