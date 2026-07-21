@@ -1,5 +1,6 @@
 import useReveal from '../hooks/useReveal.js'
 import { IconChat, IconSearch, IconRocket } from '../components/Icons.jsx'
+import { ArrowRight } from 'lucide-react'
 
 const STEPS = [
   { n: '01', icon: <IconChat />, title: 'Vous nous contactez', desc: 'Un échange gratuit pour comprendre votre besoin et vos objectifs.' },
@@ -26,7 +27,7 @@ export default function Process() {
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
               </div>
-              {i < STEPS.length - 1 && <div className="process__arrow">→</div>}
+              {i < STEPS.length - 1 && <div className="process__arrow"><ArrowRight size={26} strokeWidth={2} /></div>}
             </div>
           ))}
         </div>

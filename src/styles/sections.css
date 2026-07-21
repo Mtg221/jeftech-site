@@ -170,9 +170,13 @@
 .booking__title .gradient-text { background: linear-gradient(120deg,#fff,var(--blue-soft)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .booking__sub { color: #c3ccec; font-size: 17px; margin-top: 18px; }
 .booking__perks { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
-.booking__perks li { color: #e2e8ff; font-size: 15px; font-weight: 500; }
-.booking__alt { margin-top: 26px; color: #9aa4cc; font-size: 15px; }
-.booking__alt a { color: #fff; font-weight: 600; }
+.booking__perks li { display: flex; align-items: center; gap: 8px; color: #e2e8ff; font-size: 15px; font-weight: 500; }
+.booking__perks li svg { color: var(--blue-soft); flex-shrink: 0; }
+.booking__contact { margin-top: 26px; display: flex; flex-direction: column; gap: 14px; }
+.booking__contact li { display: flex; align-items: center; gap: 12px; }
+.booking__ic { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; color: #fff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); flex-shrink: 0; }
+.booking__contact a { color: #e2e8ff; font-weight: 500; transition: color .2s; }
+.booking__contact a:hover { color: #fff; }
 .btn--lg { font-size: 17px; padding: 17px 34px; }
 
 /* Formulaire RDV (sur fond sombre) */
@@ -255,6 +259,34 @@
 .footer__social a:hover { color: #fff; background: var(--blue); border-color: var(--blue); transform: translateY(-3px); }
 .footer__bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 22px 0; text-align: center; color: #8992b0; font-size: 14px; }
 
+/* ===== Value Props (Pourquoi Jëftech) ===== */
+.values-head { text-align: center; margin-bottom: 34px; }
+.values-head__title { font-family: var(--display); font-weight: 700; font-size: clamp(24px,3vw,32px); color: var(--navy); letter-spacing: -0.01em; }
+.values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 54px; }
+.value-card { background: #fff; border: 1px solid var(--card-border); border-radius: var(--radius); padding: 30px; box-shadow: 0 14px 40px -30px rgba(10,15,44,.4); transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.value-card:hover { transform: translateY(-6px); border-color: rgba(26,86,255,.4); box-shadow: 0 24px 44px -24px var(--glow); }
+.value-card__icon { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; color: var(--blue); background: #eef3ff; border: 1px solid #dce6ff; margin-bottom: 18px; }
+.value-card h4 { font-size: 19px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.value-card p { color: var(--gray); font-size: 15px; }
+
+/* ===== Capabilities (Ce qu'on peut construire) ===== */
+.capabilities { background: var(--bg); }
+.capabilities__grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; }
+.cap-card { background: linear-gradient(160deg, var(--navy-3), var(--navy)); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 32px; color: #fff; box-shadow: 0 20px 50px -34px rgba(26,86,255,.5); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.cap-card:hover { transform: translateY(-6px); border-color: rgba(77,130,255,.5); box-shadow: 0 30px 60px -28px var(--glow); }
+.cap-card__icon { width: 56px; height: 56px; border-radius: 15px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg,var(--blue),var(--blue-bright)); box-shadow: 0 12px 26px -8px var(--glow); margin-bottom: 20px; }
+.cap-card h3 { font-family: var(--display); font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+.cap-card p { color: #c3ccec; font-size: 15px; }
+.capabilities__note { text-align: center; margin-top: 40px; color: var(--gray); font-size: 15px; font-style: italic; }
+
+/* ===== CTA band (Travaillons ensemble) ===== */
+.cta-band { background: linear-gradient(120deg, var(--blue), var(--blue-bright)); }
+.cta-band__inner { text-align: center; max-width: 760px; margin: 0 auto; padding: 84px 24px; }
+.cta-band__title { font-family: var(--display); font-weight: 700; font-size: clamp(26px,4vw,42px); line-height: 1.1; letter-spacing: -0.02em; color: #fff; }
+.cta-band__sub { color: rgba(255,255,255,.92); font-size: 18px; margin: 18px auto 30px; max-width: 600px; }
+.cta-band__btn { background: var(--navy); color: #fff; box-shadow: 0 14px 34px -12px rgba(10,15,44,.6); font-size: 16px; padding: 16px 32px; }
+.cta-band__btn:hover { background: #060a22; transform: translateY(-2px); box-shadow: 0 20px 44px -12px rgba(10,15,44,.7); }
+
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
   .hero__inner { grid-template-columns: 1fr; }
@@ -269,7 +301,8 @@
   .ui-hero { height: 60px; } .ui-hero.sm { height: 74px; }
   .hero__chip { font-size: 12px; padding: 7px 11px; }
   .chip--1 { left: 8px; } .chip--2 { right: 4px; bottom: 30px; }
-  .services__grid, .testi__grid { grid-template-columns: 1fr 1fr; }
+  .services__grid, .values-grid { grid-template-columns: 1fr 1fr; }
+  .cta-band__inner { padding: 64px 24px; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
   .why__inner { grid-template-columns: 1fr; gap: 34px; }
   .why__lead { position: static; }
@@ -291,7 +324,7 @@
   .nav__links--open { transform: none; opacity: 1; pointer-events: auto; }
   .nav__links > a { padding: 12px 8px; }
   .nav__links .nav__cta-mobile { display: inline-flex; justify-content: center; margin-top: 8px; }
-  .services__grid, .testi__grid, .portfolio__grid { grid-template-columns: 1fr; }
+  .services__grid, .values-grid, .capabilities__grid { grid-template-columns: 1fr; }
   .contact__inner { grid-template-columns: 1fr; gap: 34px; }
   .field-row, .bk-row { grid-template-columns: 1fr; }
   .about__stats { grid-template-columns: 1fr 1fr; }

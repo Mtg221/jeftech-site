@@ -1,9 +1,17 @@
 import { useState } from 'react'
-import { CONTACT_EMAIL, WEB3FORMS_KEY } from '../config.js'
+import { CONTACT_EMAIL, WEB3FORMS_KEY, SOCIALS } from '../config.js'
 import useReveal from '../hooks/useReveal.js'
+import { Mail, Check, CalendarDays } from 'lucide-react'
+import { IconWa, IconIn } from '../components/Icons.jsx'
 
 // Créneaux horaires proposés (heures ouvrées)
 const SLOTS = ['09:00', '10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00']
+
+const PERKS = [
+  'Réponse sous 24 h',
+  'Échange gratuit et sans engagement',
+  'Conseils concrets sur votre projet',
+]
 
 export default function Booking() {
   useReveal()
@@ -47,20 +55,33 @@ export default function Booking() {
         <div className="booking__grid">
           <div className="booking__intro">
             <h2 className="booking__title">
-              Prenez <span className="gradient-text">rendez-vous.</span>
+              Parlons de <span className="gradient-text">votre projet.</span>
             </h2>
             <p className="booking__sub">
               Choisissez la date et l'heure qui vous arrangent. On vous recontacte pour
               confirmer un appel gratuit de 30 minutes — sans engagement.
             </p>
-            <ul className="booking__perks">
-              <li>✓ Réponse sous 24&nbsp;h</li>
-              <li>✓ Échange gratuit et sans engagement</li>
-              <li>✓ Conseils concrets sur votre projet</li>
+
+            <ul className="booking__contact">
+              <li>
+                <span className="booking__ic"><Mail size={18} strokeWidth={1.8} /></span>
+                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              </li>
+              <li>
+                <span className="booking__ic"><IconWa /></span>
+                <a href={SOCIALS.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
+              </li>
+              <li>
+                <span className="booking__ic"><IconIn /></span>
+                <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+              </li>
             </ul>
-            <p className="booking__alt">
-              Vous préférez écrire&nbsp;? <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-            </p>
+
+            <ul className="booking__perks">
+              {PERKS.map((p) => (
+                <li key={p}><Check size={17} strokeWidth={2.4} /> {p}</li>
+              ))}
+            </ul>
           </div>
 
           <form className="booking__form" onSubmit={handleSubmit}>
@@ -103,15 +124,16 @@ export default function Booking() {
             <input type="checkbox" name="botcheck" className="hidden-honeypot" tabIndex="-1" autoComplete="off" />
 
             <button type="submit" className="btn btn-primary btn--lg" disabled={status === 'sending'}>
-              {status === 'sending' ? 'Envoi…' : '📅 Demander ce rendez-vous'}
+              <CalendarDays size={19} strokeWidth={1.9} />
+              {status === 'sending' ? 'Envoi…' : 'Demander ce rendez-vous'}
             </button>
 
             {status === 'success' && (
-              <p className="form-msg form-msg--ok">✅ Demande envoyée ! On vous recontacte très vite pour confirmer.</p>
+              <p className="form-msg form-msg--ok">Demande envoyée ! On vous recontacte très vite pour confirmer.</p>
             )}
             {status === 'error' && (
               <p className="form-msg form-msg--err">
-                ❌ Une erreur est survenue. Écrivez-nous à <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+                Une erreur est survenue. Écrivez-nous à <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
               </p>
             )}
           </form>

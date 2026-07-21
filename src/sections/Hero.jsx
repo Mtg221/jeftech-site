@@ -1,4 +1,5 @@
 import { IconArrow } from '../components/Icons.jsx'
+import { Zap, ShieldCheck } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -26,9 +27,9 @@ export default function Hero() {
             <a className="btn btn-outline" href="#services">Voir nos services</a>
           </div>
           <div className="hero__trust">
-            <div><strong>10+</strong><span>Projets livrés</span></div>
             <div><strong>4</strong><span>Experts polyvalents</span></div>
-            <div><strong>100%</strong><span>Clients satisfaits</span></div>
+            <div><strong>24 h</strong><span>Délai de réponse</span></div>
+            <div><strong>Gratuit</strong><span>Premier échange</span></div>
           </div>
         </div>
 
@@ -53,8 +54,8 @@ export default function Hero() {
               <div className="ui-pill" />
             </div>
           </div>
-          <div className="hero__chip chip--1">⚡ Performant</div>
-          <div className="hero__chip chip--2">🔒 Sécurisé</div>
+          <div className="hero__chip chip--1"><Zap size={15} strokeWidth={2} /> Performant</div>
+          <div className="hero__chip chip--2"><ShieldCheck size={15} strokeWidth={2} /> Sécurisé</div>
         </div>
       </div>
     </section>

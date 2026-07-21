@@ -1,10 +1,22 @@
 import useReveal from '../hooks/useReveal.js'
+import { Zap, Code2, Headphones } from 'lucide-react'
 
-const STATS = [
-  { v: '10+', l: 'Projets livrés' },
-  { v: '3', l: 'Pays touchés' },
-  { v: '100%', l: 'Clients satisfaits' },
-  { v: '4', l: 'Associés polyvalents' },
+const VALUES = [
+  {
+    icon: Zap,
+    title: 'Livraison rapide',
+    desc: "On travaille vite et sans sacrifier la qualité. Vos délais sont les nôtres.",
+  },
+  {
+    icon: Code2,
+    title: 'Code propre, produit solide',
+    desc: "Chaque projet est construit pour durer — pas juste pour impressionner à la démo.",
+  },
+  {
+    icon: Headphones,
+    title: 'Suivi humain',
+    desc: "On reste disponibles après livraison. Un bug, une question — on répond.",
+  },
 ]
 
 const BLOCKS = [
@@ -46,13 +58,20 @@ export default function About() {
           <p className="section-sub">Découvrez notre mission, notre histoire et notre expertise.</p>
         </div>
 
-        <div className="about__stats about__stats--top reveal">
-          {STATS.map((s) => (
-            <div className="stat" key={s.l}>
-              <strong>{s.v}</strong>
-              <span>{s.l}</span>
-            </div>
-          ))}
+        <div className="values-head reveal">
+          <h3 className="values-head__title">Pourquoi Jëftech&nbsp;?</h3>
+        </div>
+        <div className="values-grid reveal">
+          {VALUES.map((v) => {
+            const Icon = v.icon
+            return (
+              <article className="value-card" key={v.title}>
+                <span className="value-card__icon"><Icon size={24} strokeWidth={1.8} /></span>
+                <h4>{v.title}</h4>
+                <p>{v.desc}</p>
+              </article>
+            )
+          })}
         </div>
 
         <div className="about__blocks">

@@ -25,7 +25,7 @@ export default function WhyUs() {
     <section id="why" className="section-pad why">
       <div className="container why__inner">
         <aside className="why__lead reveal">
-          <span className="eyebrow">Pourquoi Jëftech</span>
+          <span className="eyebrow">Notre approche</span>
           <h2 className="section-title">
             La différence tient <br />dans les détails.
           </h2>
