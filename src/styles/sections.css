@@ -160,18 +160,41 @@
 .testi-card figcaption strong { display: block; font-size: 15px; color: var(--navy); }
 .testi-card figcaption em { font-style: normal; font-size: 13px; color: var(--gray-dim); }
 
-/* ===== Booking (dark accent block on white page) ===== */
-.booking { overflow: hidden; text-align: center; background: var(--bg); padding-top: 40px; padding-bottom: 110px; }
-.booking__inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, var(--navy) 0%, #14205a 100%); border-radius: 28px; padding: 66px 40px; box-shadow: 0 40px 80px -40px rgba(26,86,255,.6); overflow: hidden; }
-.booking__glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 620px; height: 320px; background: var(--blue); filter: blur(120px); opacity: .35; z-index: 1; }
-.booking .pixel-grid { background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px); }
-.booking__title { position: relative; z-index: 2; font-family: var(--display); font-weight: 700; font-size: clamp(30px,4.5vw,48px); line-height: 1.08; letter-spacing: -0.02em; color: #fff; }
+/* ===== Booking / Prise de RDV (bloc marine sur fond blanc) ===== */
+.booking { overflow: hidden; background: var(--bg); padding-top: 40px; padding-bottom: 110px; }
+.booking__inner { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, var(--navy) 0%, #14205a 100%); border-radius: 28px; padding: 56px 52px; box-shadow: 0 40px 80px -40px rgba(26,86,255,.6); overflow: hidden; }
+.booking__glow { position: absolute; top: -10%; left: -10%; width: 520px; height: 320px; background: var(--blue); filter: blur(130px); opacity: .3; z-index: 0; }
+.booking .pixel-grid { background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px); z-index: 0; }
+.booking__grid { position: relative; z-index: 2; display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+.booking__title { font-family: var(--display); font-weight: 700; font-size: clamp(30px,4.2vw,44px); line-height: 1.08; letter-spacing: -0.02em; color: #fff; }
 .booking__title .gradient-text { background: linear-gradient(120deg,#fff,var(--blue-soft)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.booking__sub { position: relative; z-index: 2; color: #c3ccec; font-size: 18px; margin: 20px auto 0; max-width: 540px; }
-.booking__cta { position: relative; z-index: 2; margin-top: 34px; }
-.btn--lg { font-size: 17px; padding: 17px 34px; }
-.booking__alt { position: relative; z-index: 2; margin-top: 22px; color: #9aa4cc; font-size: 15px; }
+.booking__sub { color: #c3ccec; font-size: 17px; margin-top: 18px; }
+.booking__perks { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+.booking__perks li { color: #e2e8ff; font-size: 15px; font-weight: 500; }
+.booking__alt { margin-top: 26px; color: #9aa4cc; font-size: 15px; }
 .booking__alt a { color: #fff; font-weight: 600; }
+.btn--lg { font-size: 17px; padding: 17px 34px; }
+
+/* Formulaire RDV (sur fond sombre) */
+.booking__form { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.bk-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.bk-field { display: flex; flex-direction: column; gap: 7px; }
+.bk-field > span { font-size: 13px; font-weight: 600; color: #b9c2e6; }
+.bk-field input, .bk-field select, .bk-field textarea {
+  font-family: inherit; font-size: 15px; color: #fff;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 12px;
+  padding: 12px 14px; transition: border-color .2s, box-shadow .2s, background .2s; resize: vertical;
+}
+.bk-field input::placeholder, .bk-field textarea::placeholder { color: #7f89b3; }
+.bk-field select { cursor: pointer; }
+.bk-field select option { background: var(--navy); color: #fff; }
+.bk-field input:focus, .bk-field select:focus, .bk-field textarea:focus { outline: none; border-color: var(--blue-soft); background: rgba(255,255,255,.09); box-shadow: 0 0 0 3px rgba(77,130,255,.25); }
+/* Icône du sélecteur de date visible sur fond sombre */
+.bk-field input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1); opacity: .7; cursor: pointer; }
+.booking__form .btn { justify-content: center; margin-top: 6px; }
+.booking__form .form-msg--ok { color: #6ee7a8; }
+.booking__form .form-msg--err { color: #ff9a9a; }
+.booking__form .form-msg--err a { color: #fff; }
 
 /* ===== Why Us (composition asymétrique) ===== */
 .why { background: var(--bg); }
@@ -251,6 +274,8 @@
   .why__inner { grid-template-columns: 1fr; gap: 34px; }
   .why__lead { position: static; }
   .contact__inner { grid-template-columns: 1fr; gap: 34px; }
+  .booking__grid { grid-template-columns: 1fr; gap: 32px; }
+  .booking__inner { padding: 44px 32px; }
   .process__arrow { transform: rotate(90deg); }
   .footer__inner { grid-template-columns: 1fr; text-align: left; }
 }
@@ -268,7 +293,7 @@
   .nav__links .nav__cta-mobile { display: inline-flex; justify-content: center; margin-top: 8px; }
   .services__grid, .testi__grid, .portfolio__grid { grid-template-columns: 1fr; }
   .contact__inner { grid-template-columns: 1fr; gap: 34px; }
-  .field-row { grid-template-columns: 1fr; }
+  .field-row, .bk-row { grid-template-columns: 1fr; }
   .about__stats { grid-template-columns: 1fr 1fr; }
   .hero__trust { gap: 22px; }
   .footer__inner { grid-template-columns: 1fr; gap: 30px; }
