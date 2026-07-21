@@ -1,0 +1,18 @@
+// Icônes SVG légères (stroke = currentColor)
+const s = { width: 26, height: 26, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.7, strokeLinecap: 'round', strokeLinejoin: 'round' }
+
+export const IconWeb = () => (<svg {...s}><rect x="2" y="4" width="20" height="14" rx="2" /><path d="M2 9h20M7 21h10M12 18v3" /></svg>)
+export const IconMobile = () => (<svg {...s}><rect x="7" y="2" width="10" height="20" rx="2.5" /><path d="M11 18h2" /></svg>)
+export const IconPay = () => (<svg {...s}><rect x="2" y="5" width="20" height="14" rx="2" /><path d="M2 10h20M6 15h4" /></svg>)
+export const IconHost = () => (<svg {...s}><rect x="3" y="4" width="18" height="7" rx="1.5" /><rect x="3" y="13" width="18" height="7" rx="1.5" /><path d="M7 7.5h.01M7 16.5h.01" /></svg>)
+export const IconCustom = () => (<svg {...s}><path d="M12 2l2.4 5.2L20 8l-4 4 1 6-5-2.8L7 18l1-6-4-4 5.6-.8z" /></svg>)
+export const IconDesign = () => (<svg {...s}><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3" /></svg>)
+export const IconChat = () => (<svg {...s}><path d="M4 5h16v11H8l-4 4z" /><path d="M8 10h8M8 13h5" /></svg>)
+export const IconSearch = () => (<svg {...s}><circle cx="11" cy="11" r="7" /><path d="M21 21l-4-4" /></svg>)
+export const IconRocket = () => (<svg {...s}><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M9 12l3 3M14.5 4.5C17 2 22 2 22 2s0 5-2.5 7.5L14 15l-5-5 5.5-5.5z" /><circle cx="15.5" cy="8.5" r="1.2" /></svg>)
+export const IconStar = () => (<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .7-5.2 4.7 1.5 6.9L12 17.8 5.7 20.8l1.5-6.9L2 9.2l7-.7z" /></svg>)
+export const IconArrow = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>)
+export const IconMail = () => (<svg {...s}><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>)
+export const IconIn = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 102.5 6 2.5 2.5 0 004.98 3.5zM3 8.98h4V21H3zM9 8.98h3.8v1.64h.05a4.16 4.16 0 013.75-2.06c4 0 4.75 2.64 4.75 6.06V21h-4v-5.36c0-1.28 0-2.92-1.78-2.92s-2.05 1.39-2.05 2.83V21H9z" /></svg>)
+export const IconIg = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" /></svg>)
+export const IconWa = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 2a8 8 0 016.8 12.2l-.3.5.8 2.8-2.9-.8-.5.3A8 8 0 1112 4zm-3 4.3c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7s1.5-.6 1.7-1.2c.2-.6.2-1.1.2-1.2l-.7-.4c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 01-2-1.2 7.3 7.3 0 01-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5l-.1-.4c-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.5-.4z" /></svg>)
