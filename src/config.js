@@ -2,7 +2,7 @@
 export const CONTACT_EMAIL = 'contact@jeftech.dev'
 // Clé d'accès Web3Forms (gratuit) — créez-la sur https://web3forms.com
 // avec l'email de réception, puis collez la clé ici.
-export const WEB3FORMS_KEY = 'VOTRE_CLE_WEB3FORMS'
+export const WEB3FORMS_KEY = 'd20f1c19-b692-4637-8b5f-ad3e9af8967e'
 export const SOCIALS = {
   linkedin: 'https://www.linkedin.com/company/jeftech',
   instagram: 'https://www.instagram.com/jeftech',
