@@ -11,7 +11,7 @@ const CAPS = [
 export default function Capabilities() {
   useReveal()
   return (
-    <section id="portfolio" className="section-pad capabilities">
+    <section id="capabilities" className="section-pad capabilities">
       <div className="container">
         <div className="section-head reveal">
           <span className="eyebrow">Nos capacités</span>

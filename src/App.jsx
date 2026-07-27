@@ -4,6 +4,7 @@ import About from './sections/About.jsx'
 import Services from './sections/Services.jsx'
 import WhyUs from './sections/WhyUs.jsx'
 import Capabilities from './sections/Capabilities.jsx'
+import Portfolio from './sections/Portfolio.jsx'
 import Process from './sections/Process.jsx'
 import CtaBand from './sections/CtaBand.jsx'
 import Booking from './sections/Booking.jsx'
@@ -19,6 +20,7 @@ export default function App() {
         <Services />
         <WhyUs />
         <Capabilities />
+        <Portfolio />
         <Process />
         <CtaBand />
         <Booking />
