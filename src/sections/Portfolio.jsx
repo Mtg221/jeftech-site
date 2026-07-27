@@ -99,11 +99,6 @@ function ProjectCard({ project, index }) {
         <span className="project-card__category">{project.category}</span>
         <h3 className="project-card__title">{project.title}</h3>
         <p className="project-card__desc">{project.description}</p>
-        <div className="project-card__tech">
-          {project.tech.map((t) => (
-            <span key={t} className="tech-tag">{t}</span>
-          ))}
-        </div>
         <div className="project-card__links">
           {project.links.live && (
             <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="project-link">
