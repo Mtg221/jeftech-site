@@ -11,6 +11,6 @@ export const SOCIALS = {
 export const NAV_LINKS = [
   { label: 'À Propos', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Réalisations', href: '#portfolio' },
+  { label: 'Portfolio', href: '#portfolio-delivered' },
   { label: 'Contact', href: '#booking' },
 ]
