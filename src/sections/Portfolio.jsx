@@ -1,82 +1,76 @@
 import useReveal from '../hooks/useReveal.js'
-import { ExternalLink, GitBranch } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 
 const DEMO_PROJECTS = [
   {
     id: 1,
-    title: 'SaaS Dashboard Analytics',
+    title: 'SmartStock AI',
     category: 'SaaS & Dashboard',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Chart.js', 'Docker'],
-    description: 'Dashboard SaaS multi-tenant pour analytics e-commerce — multi-tenant, RBAC, exports CSV/PDF, temps réel.',
-    image: '/projects/saas-dashboard.jpg',
+    tech: ['React', 'Node.js', 'PostgreSQL', 'AI', 'Vercel'],
+    description: 'Gestion de stock intelligente avec IA — prévisions de demande, alertes automatiques, analytics avancés.',
+    image: '/projects/smartstock.jpg',
     links: {
-      live: 'https://analytics.demo',
-      github: 'https://github.com/jeftech/saas-analytics',
+      live: 'https://smartstock-ai-topaz.vercel.app/',
     },
   },
   {
     id: 2,
-    title: 'Plateforme Formation Pro',
-    category: 'SaaS & Dashboard',
-    tech: ['Next.js', 'Prisma', 'PostgreSQL', 'Stripe', 'NextAuth'],
-    description: 'Plateforme LMS B2B — gestion formations, certifications, facturation automatique, espace entreprise.',
-    image: '/projects/formation-pro.jpg',
+    title: 'Foot Vert',
+    category: 'Application Web',
+    tech: ['Next.js', 'Tailwind', 'Firebase', 'Vercel'],
+    description: 'Plateforme de gestion de terrains de foot — réservation en ligne, paiement, planning temps réel.',
+    image: '/projects/foot-vert.jpg',
     links: {
-      live: 'https://formation-pro.demo',
-      github: null,
+      live: 'https://foot-vert.vercel.app/',
     },
   },
   {
     id: 3,
-    title: 'Marketplace Artisanat Local',
-    category: 'E-commerce',
-    tech: ['Next.js', 'Tailwind', 'Prisma', 'PostgreSQL', 'PayPal'],
-    description: 'Marketplace artisans sénégalais — multi-vendeurs, commission auto, paiement mobile money, géolocalisation.',
-    image: '/projects/artisanat.jpg',
+    title: 'Senegal Food App',
+    category: 'Application Mobile',
+    tech: ['React Native', 'Expo', 'Firebase', 'Vercel'],
+    description: 'App de commande food au Sénégal — restaurants locaux, paiement mobile money, livraison express.',
+    image: '/projects/senegal-food.jpg',
     links: {
-      live: 'https://artisanat.demo',
-      github: 'https://github.com/jeftech/marketplace-artisanat',
+      live: 'https://senegal-food-app.vercel.app/',
     },
   },
 ]
 
 const DELIVERED_PROJECTS = [
   {
+    id: 3,
+    title: 'Ebenora',
+    category: 'Site Vitrine',
+    tech: ['React', 'Vite', 'Tailwind', 'Vercel'],
+    description: 'Site vitrine moderne pour Ebenora — design épuré, performance optimale, déploiement Vercel.',
+    image: '/projects/ebenora.jpg',
+    links: {
+      live: 'https://ebenora.vercel.app/',
+    },
+    featured: true,
+  },
+  {
     id: 4,
+    title: 'Maddelice',
+    category: 'E-commerce',
+    tech: ['Next.js', 'Tailwind', 'Stripe', 'Vercel'],
+    description: 'Boutique en ligne Maddelice — paiement sécurisé, gestion commandes, expérience client fluide.',
+    image: '/projects/maddelice.jpg',
+    links: {
+      live: 'https://maddelice.com/',
+    },
+    featured: true,
+  },
+  {
+    id: 5,
     title: 'Jëftech — Site Vitrine',
     category: 'Site Vitrine',
     tech: ['React', 'Vite', 'Tailwind', 'Vercel'],
     description: 'Site vitrine moderne pour l\'agence Jëftech — design épuré, animations fluides, performance mobile-first.',
     image: '/projects/jeftech.jpg',
     links: {
-      live: 'https://jeftech.dev',
-      github: 'https://github.com/jeftech/site-web',
-    },
-    featured: true,
-  },
-  {
-    id: 5,
-    title: 'E-commerce Fashion SN',
-    category: 'E-commerce',
-    tech: ['React', 'Node.js', 'Stripe', 'Orange Money', 'MongoDB'],
-    description: 'Boutique en ligne mode sénégalaise — paiement carte + Orange Money, gestion stock, dashboard admin.',
-    image: '/projects/fashion-sn.jpg',
-    links: {
-      live: 'https://fashion-sn.demo',
-      github: 'https://github.com/jeftech/fashion-sn',
-    },
-    featured: true,
-  },
-  {
-    id: 6,
-    title: 'App Mobile Livraison Express',
-    category: 'Application Mobile',
-    tech: ['React Native', 'Expo', 'Firebase', 'Google Maps', 'Stripe'],
-    description: 'App de livraison express (Uber-style) — géolocalisation temps réel, paiement in-app, chat client/livreur.',
-    image: '/projects/livraison-app.jpg',
-    links: {
-      live: 'https://expo.dev/@jeftech/livraison',
-      github: 'https://github.com/jeftech/livraison-app',
+      live: 'https://jeftech.dev/',
     },
     featured: true,
   },
@@ -107,11 +101,6 @@ function ProjectCard({ project, index }) {
           {project.links.live && (
             <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="project-link">
               <ExternalLink size={16} strokeWidth={2} /> Visiter
-            </a>
-          )}
-          {project.links.github && (
-            <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="project-link github">
-              <GitBranch size={16} strokeWidth={2} /> Code
             </a>
           )}
         </div>

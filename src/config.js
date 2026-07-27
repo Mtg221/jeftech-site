@@ -4,8 +4,10 @@ export const CONTACT_EMAIL = 'contact@jeftech.dev'
 // avec l'email de réception, puis collez la clé ici.
 export const WEB3FORMS_KEY = 'd20f1c19-b692-4637-8b5f-ad3e9af8967e'
 export const SOCIALS = {
-  linkedin: 'https://www.linkedin.com/company/jeftech',
-  instagram: 'https://www.instagram.com/jeftech',
+  facebook: 'https://www.facebook.com/profile.php?id=61592144225611',
+  instagram: 'https://www.instagram.com/jeftech.dev/',
+  x: 'https://x.com/jeftechdev',
+  linkedin: 'https://www.linkedin.com/company/j%C3%ABftech-dev/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BicdKjnpxTRyT6%2B83yogy5A%3D%3D',
   whatsapp: 'https://wa.me/221779649539',
 }
 export const NAV_LINKS = [
