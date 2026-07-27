@@ -322,6 +322,7 @@
   .booking__inner { padding: 44px 32px; }
   .process__arrow { transform: rotate(90deg); }
   .footer__inner { grid-template-columns: 1fr; text-align: left; }
+  .field-row, .bk-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .nav__cta { display: none; }
