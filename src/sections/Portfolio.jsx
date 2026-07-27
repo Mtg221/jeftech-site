@@ -64,7 +64,7 @@ const DELIVERED_PROJECTS = [
   },
   {
     id: 5,
-    title: 'Jëftech — Site Vitrine',
+    title: 'Jëftech',
     category: 'Site Vitrine',
     tech: ['React', 'Vite', 'Tailwind', 'Vercel'],
     description: 'Site vitrine moderne pour l\'agence Jëftech — design épuré, animations fluides, performance mobile-first.',
