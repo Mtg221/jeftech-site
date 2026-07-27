@@ -77,6 +77,13 @@ const DELIVERED_PROJECTS = [
 ]
 
 function ProjectCard({ project, index }) {
+  const initials = project.title
+    .split(' ')
+    .map(word => word[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 2)
+
   return (
     <article
       key={project.id}
@@ -85,7 +92,7 @@ function ProjectCard({ project, index }) {
       data-category={project.category}
     >
       <div className="project-card__image">
-        <img src={project.image} alt={project.title} loading="lazy" />
+        <div className="project-initials">{initials}</div>
         {project.featured && <span className="project-badge">Projet phare</span>}
       </div>
       <div className="project-card__content">
