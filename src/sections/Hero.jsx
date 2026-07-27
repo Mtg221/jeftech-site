@@ -10,8 +10,8 @@ export default function Hero() {
 
       <div className="container hero__inner">
         <div className="hero__copy">
-          <span className="hero__badge">
-            <span className="dot" /> Agence web &amp; mobile · Innover. Créer. Connecter.
+<span className="hero__badge">
+            <span className="dot" /> Agence web & mobile
           </span>
           <h1 className="hero__title">
             Votre idée mérite une vraie <span className="gradient-text">présence digitale.</span>

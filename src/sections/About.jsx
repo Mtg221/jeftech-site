@@ -87,8 +87,6 @@ export default function About() {
             </article>
           ))}
         </div>
-
-        <p className="about__tagline reveal">Innover. Créer. Connecter.</p>
       </div>
     </section>
   )

@@ -11,7 +11,6 @@ export default function Footer() {
             <img src="/logo.png" alt="Jëftech" />
             <Wordmark size={22} />
           </a>
-          <p>Innover. Créer. Connecter.</p>
         </div>
 
         <nav className="footer__links">
