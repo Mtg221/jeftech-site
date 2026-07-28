@@ -12,13 +12,13 @@ const REASONS = [
     icon: ShieldCheck,
     label: 'RIGUEUR',
     title: 'Ce qu\'on promet, on le livre.',
-    desc: 'Délais, budget, fonctionnalités — tout est cadré avant de démarrer. Pas de surprises. Pas de disparitions.',
+    desc: 'Délais, budget, fonctionnalités, tout est cadré avant de démarrer. Pas de surprises. Pas de disparitions.',
   },
   {
     icon: Phone,
     label: 'CONTINUITÉ',
     title: 'On reste là après la mise en ligne.',
-    desc: 'Un bug, une question, une évolution — vous avez notre contact direct. Pas un ticket support. Nous.',
+    desc: 'Un bug, une question, une évolution, vous avez notre contact direct. Pas un ticket support. Nous.',
   },
 ]
 
