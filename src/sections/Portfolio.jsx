@@ -74,6 +74,18 @@ const DELIVERED_PROJECTS = [
     },
     featured: true,
   },
+  {
+    id: 6,
+    title: 'Couture',
+    category: 'E-commerce',
+    tech: ['Next.js', 'Tailwind', 'Stripe', 'Vercel'],
+    description: 'Boutique en ligne Couture 1 — mode et confection, paiement sécurisé, gestion commandes, expérience client fluide.',
+    image: '/projects/couture1.jpg',
+    links: {
+      live: 'https://couture1.vercel.app/',
+    },
+    featured: true,
+  },
 ]
 
 function ProjectCard({ project, index }) {

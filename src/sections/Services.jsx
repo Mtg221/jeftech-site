@@ -18,7 +18,7 @@ export default function Services() {
         <div className="section-head reveal">
           <span className="eyebrow">Nos expertises</span>
           <h2 className="section-title">Ce qu'on fait</h2>
-          <p className="section-sub">Une équipe polyvalente qui couvre tout le cycle de votre produit digital — de l'idée à la mise en ligne.</p>
+          <p className="section-sub">Une équipe polyvalente qui couvre tout le cycle de votre produit digital de l'idée à la mise en ligne.</p>
         </div>
 
         <div className="services__grid">

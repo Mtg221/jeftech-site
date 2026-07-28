@@ -59,7 +59,7 @@ export default function Booking() {
             </h2>
             <p className="booking__sub">
               Choisissez la date et l'heure qui vous arrangent. On vous recontacte pour
-              confirmer un appel gratuit de 30 minutes — sans engagement.
+              confirmer un appel gratuit de 30 minutes et sans engagement.
             </p>
 
             <ul className="booking__contact">

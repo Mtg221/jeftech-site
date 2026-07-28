@@ -10,12 +10,12 @@ const VALUES = [
   {
     icon: Code2,
     title: 'Code propre, produit solide',
-    desc: "Chaque projet est construit pour durer — pas juste pour impressionner à la démo.",
+    desc: "Chaque projet est construit pour durer, pas juste pour impressionner à la démo.",
   },
   {
     icon: Headphones,
     title: 'Suivi humain',
-    desc: "On reste disponibles après livraison. Un bug, une question — on répond.",
+    desc: "On reste disponibles après livraison. Un bug, une question, on répond.",
   },
 ]
 
@@ -25,7 +25,7 @@ const BLOCKS = [
     title: 'Notre Mission',
     paras: [
       "Trop d'entreprises se contentent d'un site qui « fait le job » sans jamais leur rapporter un seul client. Chez Jëftech, on part de l'inverse : à quoi doit servir votre projet, et comment le rendre vraiment utile au quotidien.",
-      "On conçoit des sites et des applications pensés pour vos utilisateurs réels — pas pour cocher des cases. Rapides, clairs, agréables à utiliser, et surtout capables de générer des résultats concrets : plus de contacts, plus de ventes, moins de tâches manuelles.",
+      "On conçoit des sites et des applications pensés pour vos utilisateurs réels, pas pour cocher des cases. Rapides, clairs, agréables à utiliser, et surtout capables de générer des résultats concrets : plus de contacts, plus de ventes, moins de tâches manuelles.",
     ],
   },
   {
@@ -33,7 +33,7 @@ const BLOCKS = [
     title: 'Notre Histoire',
     paras: [
       "Jëftech est née d'un constat partagé par quatre amis développeurs : à Dakar comme ailleurs, beaucoup de porteurs de projets ont d'excellentes idées mais peinent à trouver une équipe technique fiable, qui écoute vraiment et livre ce qui était promis.",
-      "On a décidé de devenir cette équipe. Chacun de nous touche à tout — code, design, gestion de projet — ce qui nous rend rapides et polyvalents. Aujourd'hui, on accompagne aussi bien des particuliers avec une première idée que des entreprises qui veulent passer à l'échelle.",
+      "On a décidé de devenir cette équipe. Chacun de nous touche à tout code, design, gestion de projet, ce qui nous rend rapides et polyvalents. Aujourd'hui, on accompagne aussi bien des particuliers avec une première idée que des entreprises qui veulent passer à l'échelle.",
     ],
   },
   {

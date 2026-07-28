@@ -33,7 +33,7 @@ export default function Capabilities() {
         </div>
 
         <p className="capabilities__note reveal">
-          Vous serez parmi nos premiers clients de référence — et on s'en souvient.
+          Vous serez parmi nos premiers clients de référence et on s'en souvient.
         </p>
       </div>
     </section>
