@@ -11,7 +11,7 @@ export const SOCIALS = {
   whatsapp: 'https://wa.me/221779649539',
 }
 export const NAV_LINKS = [
-  { label: 'À Propos', href: '#about' },
+  { label: 'À Propos', href: '#services' },
   { label: 'Services', href: '#services' },
   { label: 'Portfolio', href: '#portfolio-delivered' },
   { label: 'Contact', href: '#booking' },

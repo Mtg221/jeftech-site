@@ -215,13 +215,25 @@
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .field { display: flex; flex-direction: column; gap: 7px; }
 .field > span { font-size: 13px; font-weight: 600; color: var(--gray); }
-.field input, .field textarea {
+.field input, .field select, .field textarea {
   font-family: inherit; font-size: 15px; color: var(--navy);
   background: #f7f9ff; border: 1px solid var(--card-border); border-radius: 12px;
   padding: 13px 15px; transition: border-color .2s, box-shadow .2s, background .2s; resize: vertical;
 }
+.field select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234a5578' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 45px;
+}
+.field select option {
+  background: #fff;
+  color: var(--navy);
+}
 .field input::placeholder, .field textarea::placeholder { color: var(--gray-dim); }
-.field input:focus, .field textarea:focus { outline: none; border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(26,86,255,.14); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(26,86,255,.14); }
 .contact__form .btn { justify-content: center; margin-top: 4px; }
 .hidden-honeypot { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
 .form-msg { font-size: 14px; font-weight: 500; margin-top: 2px; }
