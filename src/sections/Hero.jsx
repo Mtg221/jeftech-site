@@ -10,8 +10,6 @@ export default function Hero() {
 
       <div className="container hero__inner">
         <div className="hero__copy">
-<span className="hero__badge">
-          </span>
           <h1 className="hero__title">
             Votre idée mérite une vraie <span className="gradient-text">présence digitale.</span>
           </h1>

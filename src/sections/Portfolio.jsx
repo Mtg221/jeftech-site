@@ -77,7 +77,7 @@ const DELIVERED_PROJECTS = [
   {
     id: 6,
     title: 'Couture',
-    category: 'E-commerce',
+    category: 'Application Web',
     tech: ['Next.js', 'Tailwind', 'Stripe', 'Vercel'],
     description: 'Boutique en ligne Couture 1 — mode et confection, paiement sécurisé, gestion commandes, expérience client fluide.',
     image: '/projects/couture1.jpg',
