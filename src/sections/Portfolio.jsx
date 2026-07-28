@@ -81,7 +81,6 @@ const DELIVERED_PROJECTS = [
     links: {
       live: 'https://jeftech.dev/',
     },
-    featured: true,
   },
   {
     id: 6,
