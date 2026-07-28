@@ -5,7 +5,7 @@ const CAPS = [
   { icon: Globe, name: 'Sites web', desc: 'Sites vitrines et pages qui convertissent, rapides et pensés pour le mobile.' },
   { icon: Smartphone, name: 'Applications mobiles', desc: 'Apps iOS & Android fluides, natives ou cross-platform, prêtes pour vos utilisateurs.' },
   { icon: LayoutDashboard, name: 'SaaS & Dashboards', desc: 'Plateformes sur mesure et tableaux de bord clairs pour piloter votre activité.' },
-  { icon: ShoppingCart, name: 'E-commerce', desc: 'Boutiques en ligne avec paiement sécurisé — carte, mobile money et plus.' },
+  { icon: ShoppingCart, name: 'E-commerce', desc: 'Boutiques en ligne avec paiement sécurisé, carte, mobile money et plus.' },
 ]
 
 export default function Capabilities() {
