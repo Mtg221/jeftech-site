@@ -3,7 +3,7 @@ import useReveal from '../hooks/useReveal.js'
 const REASONS = [
   {
     k: 'Un seul interlocuteur, zéro sous-traitance',
-    d: "Vous parlez directement aux personnes qui codent votre projet. Pas d'intermédiaire, pas de téléphone arabe — juste des réponses claires et rapides.",
+    d: "Vous parlez directement aux personnes qui codent votre projet. Pas d'intermédiaire, pas de téléphone arabe juste des réponses claires et rapides.",
   },
   {
     k: 'Du code que vos futurs développeurs comprendront',
