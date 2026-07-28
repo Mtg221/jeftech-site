@@ -1,11 +1,10 @@
 import useReveal from '../hooks/useReveal.js'
-import { IconChat, IconSearch, IconRocket } from '../components/Icons.jsx'
-import { ArrowRight } from 'lucide-react'
+import { MessageSquare, Search, Rocket, ArrowRight } from 'lucide-react'
 
 const STEPS = [
-  { n: '01', icon: <IconChat />, title: 'Vous nous contactez', desc: 'Un échange gratuit pour comprendre votre besoin et vos objectifs.' },
-  { n: '02', icon: <IconSearch />, title: 'On analyse votre projet', desc: 'Cadrage, maquettes et devis clair vous validez avant qu\'on démarre.' },
-  { n: '03', icon: <IconRocket />, title: 'On livre & on assure le suivi', desc: 'Mise en ligne, formation et maintenance dans la durée.' },
+  { n: '01', icon: MessageSquare, title: 'Vous nous contactez', desc: 'Un échange gratuit pour comprendre votre besoin et vos objectifs.' },
+  { n: '02', icon: Search, title: 'On analyse votre projet', desc: "Cadrage, maquettes et devis clair vous validez avant qu'on démarre." },
+  { n: '03', icon: Rocket, title: 'On livre & on assure le suivi', desc: 'Mise en ligne, formation et maintenance dans la durée.' },
 ]
 
 export default function Process() {
@@ -20,16 +19,19 @@ export default function Process() {
         </div>
 
         <div className="process__flow">
-          {STEPS.map((s, i) => (
-            <div className="process__item reveal" style={{ transitionDelay: `${i * 90}ms` }} key={s.n}>
-              <div className="step">
-                <div className="step__icon">{s.icon}<span className="step__num">{s.n}</span></div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
+          {STEPS.map((s, i) => {
+            const Icon = s.icon
+            return (
+              <div className="process__item reveal" style={{ transitionDelay: `${i * 90}ms` }} key={s.n}>
+                <div className="step">
+                  <div className="step__icon"><Icon size={24} strokeWidth={1.5} style={{ color: '#fff' }} /><span className="step__num">{s.n}</span></div>
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                </div>
+                {i < STEPS.length - 1 && <div className="process__arrow"><ArrowRight size={26} strokeWidth={2} /></div>}
               </div>
-              {i < STEPS.length - 1 && <div className="process__arrow"><ArrowRight size={26} strokeWidth={2} /></div>}
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

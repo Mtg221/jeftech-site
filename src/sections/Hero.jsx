@@ -1,5 +1,4 @@
-import { IconArrow } from '../components/Icons.jsx'
-import { Zap, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Zap, ShieldCheck } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -19,7 +18,7 @@ export default function Hero() {
           </p>
           <div className="hero__cta">
             <a className="btn btn-primary" href="#booking">
-              Réserver un appel gratuit <IconArrow />
+              Réserver un appel gratuit <ArrowRight size={18} strokeWidth={2} />
             </a>
             <a className="btn btn-outline" href="#services">Voir nos services</a>
           </div>

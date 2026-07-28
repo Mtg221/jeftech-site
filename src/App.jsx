@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar.jsx'
 import Hero from './sections/Hero.jsx'
-import About from './sections/About.jsx'
 import Services from './sections/Services.jsx'
 import WhyUs from './sections/WhyUs.jsx'
 import Capabilities from './sections/Capabilities.jsx'
@@ -17,7 +16,6 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
-        <About />
         <Services />
         <WhyUs />
         <Capabilities />

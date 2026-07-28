@@ -1,54 +1,50 @@
 import useReveal from '../hooks/useReveal.js'
+import { MessageSquare, ShieldCheck, Phone } from 'lucide-react'
 
 const REASONS = [
   {
-    k: 'Un seul interlocuteur, zéro sous-traitance',
-    d: "Vous parlez directement aux personnes qui codent votre projet. Pas d'intermédiaire, pas de téléphone arabe juste des réponses claires et rapides.",
+    icon: MessageSquare,
+    label: 'CLARTÉ',
+    title: 'On commence par vous écouter.',
+    desc: "Avant d'écrire une ligne de code, on comprend votre problème, votre cible, et ce que vous voulez vraiment obtenir.",
   },
   {
-    k: 'Du code que vos futurs développeurs comprendront',
-    d: "On livre un travail propre, documenté et maintenable. Votre produit vous appartient vraiment, sans dépendance imposée.",
+    icon: ShieldCheck,
+    label: 'RIGUEUR',
+    title: 'Ce qu\'on promet, on le livre.',
+    desc: 'Délais, budget, fonctionnalités — tout est cadré avant de démarrer. Pas de surprises. Pas de disparitions.',
   },
   {
-    k: 'Des délais tenus, un budget annoncé',
-    d: "Un devis clair avant de démarrer, des points d'avancement réguliers, et pas de mauvaise surprise à la facturation.",
-  },
-  {
-    k: 'On reste après la mise en ligne',
-    d: "Hébergement, correctifs, évolutions : on assure le suivi dans la durée pour que votre outil reste rapide et sécurisé.",
+    icon: Phone,
+    label: 'CONTINUITÉ',
+    title: 'On reste là après la mise en ligne.',
+    desc: 'Un bug, une question, une évolution — vous avez notre contact direct. Pas un ticket support. Nous.',
   },
 ]
 
 export default function WhyUs() {
   useReveal()
   return (
-    <section id="why" className="section-pad why">
-      <div className="container why__inner">
-        <aside className="why__lead reveal">
-          <span className="eyebrow">Notre approche</span>
-          <h2 className="section-title">
-            La différence tient <br />dans les détails.
-          </h2>
-          <p className="section-sub">
-            Beaucoup savent livrer un site. Peu prennent le temps de comprendre votre métier
-            avant d'écrire la première ligne. C'est là que tout se joue.
-          </p>
-          <a className="btn btn-primary why__cta" href="#booking">
-            Discutons de votre projet
-          </a>
-        </aside>
+    <section id="why" className="section-pad why-us">
+      <div className="container">
+        <div className="section-head reveal section-head--center">
+          <span className="eyebrow" style={{ color: '#1A56FF' }}>POURQUOI JËFTECH ?</span>
+          <h2 className="section-title">Ce qu'on vous apporte</h2>
+        </div>
 
-        <ul className="why__list">
-          {REASONS.map((r, i) => (
-            <li className="why-item reveal" style={{ transitionDelay: `${i * 80}ms` }} key={r.k}>
-              <span className="why-item__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-              <div>
-                <h3>{r.k}</h3>
-                <p>{r.d}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div className="why-us__grid">
+          {REASONS.map((r, i) => {
+            const Icon = r.icon
+            return (
+              <article className="why-us__card reveal" style={{ transitionDelay: `${i * 80}ms` }} key={r.label}>
+                <span className="why-us__icon"><Icon size={28} strokeWidth={1.5} style={{ color: '#1A56FF' }} /></span>
+                <span className="why-us__label">{r.label}</span>
+                <h3 className="why-us__title">{r.title}</h3>
+                <p className="why-us__desc">{r.desc}</p>
+              </article>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

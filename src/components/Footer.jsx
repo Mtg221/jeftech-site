@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer__bottom">
-        <div className="container">© 2025 Jëftech. Tous droits réservés.</div>
+        <div className="container">© 2026 Jëftech. Tous droits réservés.</div>
       </div>
     </footer>
   )
