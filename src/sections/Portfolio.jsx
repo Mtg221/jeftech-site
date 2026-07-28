@@ -7,7 +7,7 @@ const PROJECT_IMAGES = {
   'Jëftech': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   'Couture': 'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800&q=80',
   'SmartStock AI': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-  'Foot Vert': 'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800&q=80',
+  'Foot Vert': 'https://res.cloudinary.com/dm9iz5eqf/image/upload/v1785278883/Screenshot_2026-07-28_at_22.46.42_g7unvh.png',
   'Senegal Food App': 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
 }
 
