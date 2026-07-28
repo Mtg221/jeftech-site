@@ -1,14 +1,13 @@
 import useReveal from '../hooks/useReveal.js'
-import { ExternalLink, Eye } from 'lucide-react'
 
 const PROJECT_IMAGES = {
-  'Ebenora': 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
-  'Maddelice': 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
-  'Jëftech': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-  'Couture': 'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800&q=80',
+  'Ebenora': 'https://res.cloudinary.com/dm9iz5eqf/image/upload/v1785279244/Screenshot_2026-07-28_at_22.53.16_jpcpqu.png',
+  'Maddelice': 'https://res.cloudinary.com/dm9iz5eqf/image/upload/v1785279335/Screenshot_2026-07-28_at_22.54.52_gza81r.png',
+  'Jëftech': 'https://res.cloudinary.com/dm9iz5eqf/image/upload/v1785279420/Screenshot_2026-07-28_at_22.56.08_ob5f1x.png',
+  'Couture': 'https://res.cloudinary.com/dm9iz5eqf/image/upload/v1785279512/Screenshot_2026-07-28_at_22.57.33_mvhn2t.png',
   'SmartStock AI': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   'Foot Vert': 'https://res.cloudinary.com/dm9iz5eqf/image/upload/v1785278883/Screenshot_2026-07-28_at_22.46.42_g7unvh.png',
-  'Senegal Food App': 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+  'Senegal Food App': 'https://res.cloudinary.com/dm9iz5eqf/image/upload/v1785279162/Screenshot_2026-07-28_at_22.51.55_urcwir.png',
 }
 
 const DEMO_PROJECTS = [
@@ -99,6 +98,7 @@ const DELIVERED_PROJECTS = [
 ]
 
 function ProjectCard({ project, index }) {
+  const liveUrl = project.links?.live || '#'
   return (
     <article
       key={project.id}
@@ -106,33 +106,28 @@ function ProjectCard({ project, index }) {
       style={{ transitionDelay: `${index * 80}ms` }}
       data-category={project.category}
     >
-      <div className="project-card__image-wrapper">
-        <div
-          className="project-card__image"
-          style={{
-            backgroundImage: `url(${project.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
-        <div className="project-card__overlay">
-          <span className="project-card__overlay-text">Voir le projet →</span>
+      <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-card__link">
+        <div className="project-card__image-wrapper">
+          <div
+            className="project-card__image"
+            style={{
+              backgroundImage: `url(${project.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+          <div className="project-card__overlay">
+            <span className="project-card__overlay-text">Voir le projet →</span>
+          </div>
+          {project.featured && <span className="project-badge">Projet phare</span>}
         </div>
-        {project.featured && <span className="project-badge">Projet phare</span>}
-      </div>
-      <div className="project-card__content">
-        <span className="project-card__category">{project.category}</span>
-        <h3 className="project-card__title">{project.title}</h3>
-        <p className="project-card__desc">{project.description}</p>
-        <div className="project-card__links">
-          {project.links.live && (
-            <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="project-link">
-              <ExternalLink size={16} strokeWidth={2} /> Visiter
-            </a>
-          )}
+        <div className="project-card__content">
+          <span className="project-card__category">{project.category}</span>
+          <h3 className="project-card__title">{project.title}</h3>
+          <p className="project-card__desc">{project.description}</p>
         </div>
-      </div>
+      </a>
     </article>
   )
 }
