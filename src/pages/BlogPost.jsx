@@ -12,66 +12,51 @@ function formatDate(dateStr) {
 function getPostContent(slug) {
   const contents = {
     'cout-site-web-senegal': `
-      <h2>Les quatre gammes de prix</h2>
+      <h2>Les quatre types de projets web</h2>
       
-      <h3>1. Site vitrine simple — 500 000 à 1 500 000 FCFA</h3>
+      <h3>1. Site vitrine simple</h3>
       <p><strong>Pour qui ?</strong> Artisans, consultants, TPE, associations.</p>
-      <p><strong>Ce que vous obtenez :</strong> 5-8 pages (Accueil, À propos, Services, Réalisations, Contact), design responsive, formulaire de contact, SEO de base, hébergement 1 an.</p>
+      <p><strong>Ce que vous obtenez :</strong> 5-8 pages (Accueil, À propos, Services, Réalisations, Contact), design responsive, formulaire de contact, SEO de base, hébergement inclus la première année.</p>
       <p><strong>Délai :</strong> 2-3 semaines.</p>
 
-      <h3>2. Site vitrine professionnel — 1 500 000 à 3 500 000 FCFA</h3>
+      <h3>2. Site vitrine professionnel</h3>
       <p><strong>Pour qui ?</strong> PME, cabinets, écoles, ONG, startups.</p>
-      <p><strong>Ce que vous obtenez :</strong> Design sur mesure, blog/CMS pour publier du contenu, optimisation SEO avancée, analytics, formulaires avancés, RGPD, performance (Lighthouse > 90), formation à l'administration.</p>
+      <p><strong>Ce que vous obtenez :</strong> Design sur mesure, blog/CMS pour publier du contenu, optimisation SEO avancée, analytics, formulaires avancés, conformité RGPD, performance (Lighthouse > 90), formation à l'administration.</p>
       <p><strong>Délai :</strong> 4-6 semaines.</p>
 
-      <h3>3. E-commerce — 3 000 000 à 8 000 000 FCFA</h3>
+      <h3>3. E-commerce</h3>
       <p><strong>Pour qui ?</strong> Commerçants, marques, distributeurs.</p>
       <p><strong>Ce que vous obtenez :</strong> Catalogue produits illimité, variantes (tailles, couleurs), panier, paiement <strong>Orange Money + Wave + Carte</strong>, espace client, gestion stocks/commandes, emails transactionnels, dashboard admin, SEO fiches produits, facturation auto.</p>
       <p><strong>Délai :</strong> 6-10 semaines.</p>
 
-      <h3>4. Application web / SaaS sur mesure — 5 000 000 à 15 000 000+ FCFA</h3>
+      <h3>4. Application web / SaaS sur mesure</h3>
       <p><strong>Pour qui ?</strong> Entreprises avec processus métiers uniques, startups tech, Scale-ups.</p>
       <p><strong>Ce que vous obtenez :</strong> Architecture modulaire, API documentées, authentification SSO/2FA, rôles/permissions (RBAC), temps réel, automatisations, tests automatisés, CI/CD, monitoring, documentation technique, propriété du code.</p>
       <p><strong>Délai :</strong> 3-6 mois.</p>
 
-      <h2>Ce qui fait varier le prix</h2>
-      <table>
-        <thead>
-          <tr><th>Facteur</th><th>Impact sur le prix</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Nombre de pages uniques</td><td>+10-20% par page complexe</td></tr>
-          <tr><td>Design sur mesure vs template</td><td>x2 à x3</td></tr>
-          <tr><td>Intégration paiement (OM, Wave, Stripe)</td><td>+500k-1.5M FCFA</td></tr>
-          <tr><td>Espace membre / espace client</td><td>+1-2M FCFA</td></tr>
-          <tr><td>Multilingue (FR/EN/WO)</td><td>+30-50%</td></tr>
-          <tr><td>Migration données existantes</td><td>Selon volume</td></tr>
-          <tr><td>Maintenance incluse (1 an)</td><td>+15-25% du projet</td></tr>
-        </tbody>
-      </table>
+      <h2>Ce qui influence le budget</h2>
+      <ul>
+        <li>Nombre de pages uniques et leur complexité</li>
+        <li>Design sur mesure vs template</li>
+        <li>Intégration paiement (Orange Money, Wave, Stripe)</li>
+        <li>Espace membre / espace client</li>
+        <li>Multilingue (FR/EN/WO)</li>
+        <li>Migration données existantes</li>
+        <li>Maintenance incluse (1 an)</li>
+      </ul>
 
       <h2>Les pièges à éviter</h2>
       <h3>❌ "Je vais prendre le moins cher"</h3>
-      <p>Un site à 300 000 FCFA fait souvent avec un builder (Wix, WordPress + thème) vous coûtera plus cher à long terme : performances médiocres, SEO inexistant, impossible à faire évoluer, dépendance au prestataire.</p>
+      <p>Un site low-cost fait avec un builder (Wix, WordPress + thème) vous coûtera plus cher à long terme : performances médiocres, SEO inexistant, impossible à faire évoluer, dépendance au prestataire.</p>
 
       <h3>❌ "Mon neveu sait faire des sites"</h3>
       <p>Compétence technique ≠ expertise produit. Un site pro demande : UX, SEO, accessibilité, sécurité, performance, conversion, maintenance. C'est un métier.</p>
 
       <h3>❌ Négliger le contenu</h3>
-      <p>Le design sans contenu, c'est une coquille vide. Prévoyez du budget/temps pour : textes optimisés SEO, photos pro, vidéos, témoignages clients.</p>
+      <p>Le design sans contenu, c'est une coquille vide. Prévoyez du temps pour : textes optimisés SEO, photos pro, vidéos, témoignages clients.</p>
 
       <h3>❌ Oublier l'après-lancement</h3>
-      <p>Un site non maintenu = faille de sécurité + lenteur + baisse SEO. Prévoyez 15-25% du budget initial par an pour la maintenance.</p>
-
-      <h2>Comment calculer votre ROI</h2>
-      <pre><code>(Chiffre d'affaires généré par le site - Coût total du site) / Coût total du site × 100 = ROI %</code></pre>
-      <p><strong>Exemple réel (client Jëftech, e-commerce cosmétiques) :</strong></p>
-      <ul>
-        <li>Investissement : 4 200 000 FCFA (site + 1 an maintenance)</li>
-        <li>CA généré an 1 : 18 500 000 FCFA</li>
-        <li>Marge nette : ~35% = 6 475 000 FCFA</li>
-        <li><strong>ROI : 54% la première année</strong></li>
-      </ul>
+      <p>Un site non maintenu = faille de sécurité + lenteur + baisse SEO. Prévoyez un budget maintenance annuel.</p>
 
       <h2>Notre approche chez Jëftech</h2>
       <ol>
@@ -109,7 +94,7 @@ function getPostContent(slug) {
       <p>Une agence pro a un processus <strong>documenté</strong> qu'elle vous explique au premier rendez-vous :</p>
       <ol>
         <li><strong>Découverte</strong> : Besoins, cibles, objectifs, KPIs</li>
-        <li><strong>Cadrage</strong> : Périmètre, planning, budget, risques</li>
+        <li><strong>Cadrage</strong> : Périmètre, planning, risques</li>
         <li><strong>Design</strong> : Wireframes → Maquettes → Prototypes → Validation</li>
         <li><strong>Développement</strong> : Sprints hebdomadaires, démo, feedback</li>
         <li><strong>Tests</strong> : QA, UAT, performance, sécurité, accessibilité</li>
@@ -118,7 +103,7 @@ function getPostContent(slug) {
       </ol>
       <p><strong>Drapeau rouge :</strong> "On commence demain, on verra au fur à mesure" ou pas de planning avec jalons.</p>
 
-      <h2>4. La transparence sur les coûts — pas de surprise</h2>
+      <h2>4. La transparence — pas de surprise</h2>
       <p><strong>Un devis pro contient :</strong></p>
       <ul>
         <li>Détail par fonctionnalité/écran</li>
@@ -127,7 +112,7 @@ function getPostContent(slug) {
         <li>Conditions de paiement (échéancier lié aux livrables)</li>
         <li>Clause de propriété du code source</li>
       </ul>
-      <p><strong>Drapeau rouge :</strong> Devis une ligne "Site web complet — X FCFA" sans détail.</p>
+      <p><strong>Drapeau rouge :</strong> Devis une ligne "Site web complet" sans détail.</p>
 
       <h2>5. La maintenance n'est pas une option</h2>
       <p><strong>Posez ces questions :</strong></p>
@@ -158,54 +143,51 @@ function getPostContent(slug) {
       </ul>
     `,
     'cout-application-mobile-senegal': `
-      <h2>Les 3 approches techniques — et leur impact prix</h2>
+      <h2>Les 3 approches techniques</h2>
       <table>
         <thead>
-          <tr><th>Approche</th><th>Description</th><th>Prix typique</th><th>Pour qui ?</th></tr>
+          <tr><th>Approche</th><th>Description</th><th>Pour qui ?</th></tr>
         </thead>
         <tbody>
-          <tr><td>React Native / Expo (Cross-platform)</td><td>Un code base pour iOS + Android. 80-90% code partagé.</td><td>3M - 12M FCFA</td><td>Startups, PME, MVP, apps métiers</td></tr>
-          <tr><td>Flutter (Cross-platform Google)</td><td>Un code base, performance proche native, UI cohérente.</td><td>3.5M - 15M FCFA</td><td>Apps exigeantes UI, équipes Flutter</td></tr>
-          <tr><td>Native (Swift iOS + Kotlin Android)</td><td>Deux codes séparés, performance max, accès total APIs.</td><td>8M - 25M+ FCFA</td><td>Apps critiques (banque, santé, jeux 3D), gros budgets</td></tr>
+          <tr><td>React Native / Expo (Cross-platform)</td><td>Un code base pour iOS + Android. 80-90% code partagé.</td><td>Startups, PME, MVP, apps métiers</td></tr>
+          <tr><td>Flutter (Cross-platform Google)</td><td>Un code base, performance proche native, UI cohérente.</td><td>Apps exigeantes UI, équipes Flutter</td></tr>
+          <tr><td>Native (Swift iOS + Kotlin Android)</td><td>Deux codes séparés, performance max, accès total APIs.</td><td>Apps critiques (banque, santé, jeux 3D), gros budgets</td></tr>
         </tbody>
       </table>
       <p><strong>Notre recommandation par défaut : React Native + Expo</strong> — meilleur ratio délai/coût/qualité pour 90% des projets au Sénégal.</p>
 
-      <h2>Ce qui fait varier le prix</h2>
+      <h2>Ce qui influence le budget</h2>
       <h3>Complexité fonctionnelle</h3>
       <table>
-        <thead><tr><th>Niveau</th><th>Exemples</th><th>Budget indicatif</th></tr></thead>
+        <thead><tr><th>Niveau</th><th>Exemples</th></tr></thead>
         <tbody>
-          <tr><td>Simple</td><td>Catalogue, vitrine, formulaire, contenu statique, auth basique</td><td>3M - 5M FCFA</td></tr>
-          <tr><td>Moyenne</td><td>E-commerce, réservation, chat, paiement, notifications, géoloc, mode offline partiel</td><td>5M - 10M FCFA</td></tr>
-          <tr><td>Complexe</td><td>Temps réel (tracking, chat), IA/ML, sync offline-first, multi-rôles, API tierces multiples</td><td>10M - 25M+ FCFA</td></tr>
+          <tr><td>Simple</td><td>Catalogue, vitrine, formulaire, contenu statique, auth basique</td></tr>
+          <tr><td>Moyenne</td><td>E-commerce, réservation, chat, paiement, notifications, géoloc, mode offline partiel</td></tr>
+          <tr><td>Complexe</td><td>Temps réel (tracking, chat), IA/ML, sync offline-first, multi-rôles, API tierces multiples</td></tr>
         </tbody>
       </table>
 
-      <h3>Fonctionnalités "coûteuses" à prévoir</h3>
-      <table>
-        <thead><tr><th>Fonctionnalité</th><th>Surcoût estimé</th></tr></thead>
-        <tbody>
-          <tr><td>Paiement mobile money (Orange Money, Wave, CinetPay)</td><td>+500k - 1.5M FCFA</td></tr>
-          <tr><td>Notifications push (Firebase, OneSignal)</td><td>+300k - 800k FCFA</td></tr>
-          <tr><td>Géolocalisation + carte interactive</td><td>+500k - 1.5M FCFA</td></tr>
-          <tr><td>Mode hors-ligne complet (sync bidirectionnelle)</td><td>+1.5M - 3M FCFA</td></tr>
-          <tr><td>Chat temps réel / messagerie</td><td>+1M - 2.5M FCFA</td></tr>
-          <tr><td>Authentification biométrique / SSO</td><td>+300k - 800k FCFA</td></tr>
-          <tr><td>Tableau de bord admin web associé</td><td>+2M - 5M FCFA</td></tr>
-          <tr><td>Publication stores (comptes dev, review, metadata)</td><td>+200k - 500k FCFA</td></tr>
-        </tbody>
-      </table>
+      <h3>Fonctionnalités qui augmentent le coût</h3>
+      <ul>
+        <li>Paiement mobile money (Orange Money, Wave, CinetPay)</li>
+        <li>Notifications push (Firebase, OneSignal)</li>
+        <li>Géolocalisation + carte interactive</li>
+        <li>Mode hors-ligne complet (sync bidirectionnelle)</li>
+        <li>Chat temps réel / messagerie</li>
+        <li>Authentification biométrique / SSO</li>
+        <li>Tableau de bord admin web associé</li>
+        <li>Publication stores (comptes dev, review, metadata)</li>
+      </ul>
 
-      <h2>Exemples réels (projets Jëftech)</h2>
+      <h2>Exemples de projets Jëftech</h2>
       <h3>Senegal Food App — Livraison repas Dakar</h3>
-      <ul><li><strong>Stack :</strong> React Native (Expo) + Node.js/Express + PostgreSQL + Firebase</li><li><strong>Budget :</strong> ~9 500 000 FCFA</li><li><strong>Délai :</strong> 14 semaines</li><li><strong>Résultat :</strong> 1000+ commandes mois 1, note 4.7/5 stores</li></ul>
+      <ul><li><strong>Stack :</strong> React Native (Expo) + Node.js/Express + PostgreSQL + Firebase</li><li><strong>Délai :</strong> 14 semaines</li><li><strong>Résultat :</strong> 1000+ commandes mois 1, note 4.7/5 stores</li></ul>
 
       <h3>Foot Vert — Réservation terrains foot</h3>
-      <ul><li><strong>Stack :</strong> PWA (Next.js) + Firebase — choix PWA vs natif pour déploiement instantané sans store</li><li><strong>Budget :</strong> ~6 000 000 FCFA (PWA = 30% moins cher que natif)</li><li><strong>Délai :</strong> 8 semaines</li></ul>
+      <ul><li><strong>Stack :</strong> PWA (Next.js) + Firebase — choix PWA vs natif pour déploiement instantané sans store</li><li><strong>Délai :</strong> 8 semaines</li></ul>
 
       <h3>App interne logistique — Client B2B</h3>
-      <ul><li><strong>Stack :</strong> React Native (Expo) + API existante client</li><li><strong>Budget :</strong> ~4 500 000 FCFA</li><li><strong>Délai :</strong> 6 semaines</li></ul>
+      <ul><li><strong>Stack :</strong> React Native (Expo) + API existante client</li><li><strong>Délai :</strong> 6 semaines</li></ul>
     `,
     'digitaliser-pme-senegal': `
       <h2>Pourquoi les PME sénégalaises tardent-elles ?</h2>
@@ -236,7 +218,7 @@ function getPostContent(slug) {
       </table>
       <p><strong>Résultat :</strong> Matrice de priorités — Quick wins vs Projets structurants.</p>
 
-      <h3>Étape 2 : Quick wins — À faire ce mois-ci (0-500k FCFA)</h3>
+      <h3>Étape 2 : Quick wins — À faire ce mois-ci (budget réduit)</h3>
       <table>
         <thead><tr><th>Action</th><th>Outil suggéré</th><th>Gain</th></tr></thead>
         <tbody>
@@ -246,22 +228,22 @@ function getPostContent(slug) {
           <tr><td>Formulaire contact/site → email + WhatsApp</td><td>Web3Forms, Formspree</td><td>Leads capturés</td></tr>
           <tr><td>Facturation dématérialisée</td><td>Facture.net, Sage, Odoo</td><td>-80% temps admin</td></tr>
           <tr><td>Paiement mobile money sur devis/factures</td><td>CinetPay, SenPay, Wave Pro</td><td>Encaissement +40%</td></tr>
-          <tr><td>Drive partagé (Drive, OneDrive, Notion)</td><td>0-50k FCFA/mois</td><td>Fini les pertes de fichiers</td></tr>
+          <tr><td>Drive partagé (Drive, OneDrive, Notion)</td><td>Gratuit / faible coût</td><td>Fini les pertes de fichiers</td></tr>
           <tr><td>Réunions visio régulières</td><td>Meet, Zoom, Teams</td><td>Équipes alignées</td></tr>
         </tbody>
       </table>
 
-      <h3>Étape 3 : Projets structurants — 3-12 mois (500k - 15M FCFA)</h3>
-      <p><strong>Priorité 1 : Site web pro + SEO local</strong> — Budget 1.5M-3.5M | ROI : Visibilité 24/7, crédibilité, leads qualifiés</p>
-      <p><strong>Priorité 2 : CRM léger + pipeline commercial</strong> — Budget 0-500k/an | Outils : HubSpot (gratuit), Pipedrive, Brevo, Odoo, Notion CRM</p>
-      <p><strong>Priorité 3 : Gestion stocks/commandes (si commerce)</strong> — Budget 2M-8M | Outils : Odoo, TradeGecko, solution sur mesure</p>
-      <p><strong>Priorité 4 : Espace client / Portail</strong> — Budget 3M-8M | Fonctionnalités : Suivi commande, factures, tickets, documents, paiement</p>
+      <h3>Étape 3 : Projets structurants — 3-12 mois</h3>
+      <p><strong>Priorité 1 : Site web pro + SEO local</strong> — Visibilité 24/7, crédibilité, leads qualifiés</p>
+      <p><strong>Priorité 2 : CRM léger + pipeline commercial</strong> — Outils : HubSpot (gratuit), Pipedrive, Brevo, Odoo, Notion CRM</p>
+      <p><strong>Priorité 3 : Gestion stocks/commandes (si commerce)</strong> — Outils : Odoo, TradeGecko, solution sur mesure</p>
+      <p><strong>Priorité 4 : Espace client / Portail</strong> — Fonctionnalités : Suivi commande, factures, tickets, documents, paiement</p>
 
       <h3>Étape 4 : Pilotage par la data — Continu</h3>
       <p>Tableau de bord mensuel minimal (15 min de lecture) : CA mensuel, Nouveaux leads, Taux conversion, Panier moyen, CAC, NPS, Trafic site, Taux panier abandonné.</p>
 
       <h3>Étape 5 : Culture & formation — Le vrai levier</h3>
-      <p>Sans adhésion de l'équipe, les outils servent à rien. Formation 30 min hebdo mois 1, puis mensuel. "Digital champion" par équipe. Budget formation 50k-200k FCFA/an/collaborateur.</p>
+      <p>Sans adhésion de l'équipe, les outils servent à rien. Formation 30 min hebdo mois 1, puis mensuel. "Digital champion" par équipe.</p>
     `,
     'logiciel-sur-mesure-entreprise': `
       <h2>SaaS standard vs Logiciel sur mesure : le match</h2>
@@ -300,26 +282,26 @@ function getPostContent(slug) {
       <h3>Scalabilité maîtrisée</h3>
       <p>Architecture modulaire : on ajoute des modules sans casser l'existant. Micro-services si besoin. Kubernetes, serverless, ou VM simple — vous choisissez.</p>
 
-      <h2>Combien ça coûte ? (Vraiment)</h2>
+      <h2>Types de projets et délais indicatifs</h2>
       <table>
-        <thead><tr><th>Type de projet</th><th>Budget</th><th>Délai</th><th>ROI typique</th></tr></thead>
+        <thead><tr><th>Type de projet</th><th>Délai</th><th>ROI typique</th></tr></thead>
         <tbody>
-          <tr><td>Outil interne unique (ex: devis auto, planning)</td><td>3M - 8M FCFA</td><td>6-10 semaines</td><td>6-12 mois</td></tr>
-          <tr><td>Portail client/fournisseur</td><td>5M - 12M FCFA</td><td>3-5 mois</td><td>12-18 mois</td></tr>
-          <tr><td>SaaS à revendre (multi-tenant)</td><td>15M - 50M+ FCFA</td><td>6-12 mois</td><td>18-36 mois</td></tr>
-          <tr><td>Remplacement ERP legacy</td><td>20M - 100M+ FCFA</td><td>12-24 mois</td><td>24-48 mois</td></tr>
+          <tr><td>Outil interne unique (ex: devis auto, planning)</td><td>6-10 semaines</td><td>6-12 mois</td></tr>
+          <tr><td>Portail client/fournisseur</td><td>3-5 mois</td><td>12-18 mois</td></tr>
+          <tr><td>SaaS à revendre (multi-tenant)</td><td>6-12 mois</td><td>18-36 mois</td></tr>
+          <tr><td>Remplacement ERP legacy</td><td>12-24 mois</td><td>24-48 mois</td></tr>
         </tbody>
       </table>
     `,
     'application-web-vs-mobile': `
       <h2>Les 4 options techniques — et ce qu'elles impliquent</h2>
       <table>
-        <thead><tr><th>Type</th><th>Technos typiques</th><th>Installation</th><th>Accès matériel</th><th>Stores</th><th>Coût relatif</th></tr></thead>
+        <thead><tr><th>Type</th><th>Technos typiques</th><th>Installation</th><th>Accès matériel</th><th>Stores</th></tr></thead>
         <tbody>
-          <tr><td>Site web responsive</td><td>HTML/CSS/JS, React, Vue, Next.js</td><td>Aucune (navigateur)</td><td>Limité (caméra, GPS, push partiel)</td><td>Non</td><td>1x (base)</td></tr>
-          <tr><td>PWA (Progressive Web App)</td><td>Next.js, Vite, Workbox, Service Workers</td><td>Optionnelle (icône home screen)</td><td>Étendu (GPS, caméra, push, offline, background sync)</td><td>Non (mais installable)</td><td>1.2x - 1.5x</td></tr>
-          <tr><td>Hybride / Cross-platform</td><td>React Native, Expo, Flutter, Ionic</td><td>Oui (App Store / Play Store)</td><td>Complet (natif via bridges)</td><td>Oui</td><td>2x - 3x</td></tr>
-          <tr><td>Native pur</td><td>Swift/SwiftUI (iOS), Kotlin/Jetpack Compose (Android)</td><td>Oui</td><td>Total, performance max</td><td>Oui</td><td>4x - 6x</td></tr>
+          <tr><td>Site web responsive</td><td>HTML/CSS/JS, React, Vue, Next.js</td><td>Aucune (navigateur)</td><td>Limité (caméra, GPS, push partiel)</td><td>Non</td></tr>
+          <tr><td>PWA (Progressive Web App)</td><td>Next.js, Vite, Workbox, Service Workers</td><td>Optionnelle (icône home screen)</td><td>Étendu (GPS, caméra, push, offline, background sync)</td><td>Non (mais installable)</td></tr>
+          <tr><td>Hybride / Cross-platform</td><td>React Native, Expo, Flutter, Ionic</td><td>Oui (App Store / Play Store)</td><td>Complet (natif via bridges)</td><td>Oui</td></tr>
+          <tr><td>Native pur</td><td>Swift/SwiftUI (iOS), Kotlin/Jetpack Compose (Android)</td><td>Oui</td><td>Total, performance max</td><td>Oui</td></tr>
         </tbody>
       </table>
 
@@ -332,8 +314,8 @@ function getPostContent(slug) {
           <tr><td>2. Besoin caméra / GPS / Bluetooth / Capteurs ?</td><td>Non ou basique (scan QR occasionnel)</td><td>Oui, intensif (scan codes-barres, AR, tracking, santé)</td></tr>
           <tr><td>3. Mode hors-ligne critique ?</td><td>Non (connexion dispo)</td><td>Oui (terrain, métro, zones blanches, sync différée)</td></tr>
           <tr><td>4. Notifications push indispensables ?</td><td>Non (email/WhatsApp suffit)</td><td>Oui (alertes temps réel, rappels, promos)</td></tr>
-          <tr><td>5. Budget développement ?</td><td>< 8M FCFA</td><td>> 8M FCFA</td></tr>
-          <tr><td>6. Délai mise en marché ?</td><td>< 8 semaines</td><td>> 8 semaines</td></tr>
+          <tr><td>5. Budget développement ?</td><td>Modéré</td><td>Plus élevé</td></tr>
+          <tr><td>6. Délai mise en marché ?</td><td>Court</td><td>Plus long</td></tr>
           <tr><td>7. Public cible "grand public" B2C ?</td><td>Non (B2B, interne, partenaires)</td><td>Oui (consommateurs, téléchargement store)</td></tr>
           <tr><td>8. Monétisation via stores ?</td><td>Non</td><td>Oui (abonnements, achats in-app, pubs natives)</td></tr>
         </tbody>
@@ -342,15 +324,15 @@ function getPostContent(slug) {
       <h2>Quand choisir le Web / PWA ?</h2>
       <p><strong>✅ Idéal pour :</strong> Outils internes / B2B, Portails clients/fournisseurs, SaaS métiers, Sites e-commerce, MVP / Validation marché, Budget serré / Délai court.</p>
       <p><strong>🎯 PWA = Le meilleur des deux mondes (souvent)</strong> : Installable depuis le navigateur, fonctionne hors-ligne, push notifications, mise à jour instantanée, SEO natif, partageable par URL.</p>
-      <p><strong>Exemple Jëftech : Foot Vert</strong> — Réservation terrains foot. Choisi en PWA car : utilisateurs sur mobile MAIS pas besoin caméra/Bluetooth, pas de store = déploiement instantané, SEO crucial, budget 30% < natif.</p>
+      <p><strong>Exemple Jëftech : Foot Vert</strong> — Réservation terrains foot. Choisi en PWA car : utilisateurs sur mobile MAIS pas besoin caméra/Bluetooth, pas de store = déploiement instantané, SEO crucial, budget plus réduit que natif.</p>
 
       <h2>Quand choisir le Mobile (Hybride recommandé) ?</h2>
       <p><strong>✅ Idéal pour :</strong> Apps grand public B2C, Usage terrain / mobile-first, Fonctions natives critiques, Hors-ligne réel requis, Monétisation stores, Marque / Visibilité.</p>
-      <p><strong>🎯 React Native / Expo = Notre choix par défaut</strong> : 1 codebase iOS+Android, performance quasi-native, écosystème énorme, Expo = dev rapide, build cloud, OTA updates. Coût ~50-60% du natif pur.</p>
+      <p><strong>🎯 React Native / Expo = Notre choix par défaut</strong> : 1 codebase iOS+Android, performance quasi-native, écosystème énorme, Expo = dev rapide, build cloud, OTA updates.</p>
       <p><strong>Exemple Jëftech : Senegal Food App</strong> — Livraison repas. Choisi React Native car : livreurs (GPS continu, caméra, push, hors-ligne), clients (push, tracking, paiement in-app), stores = confiance + paiement in-app + visibilité.</p>
 
       <h2>Quand choisir le Native pur (Swift/Kotlin) ?</h2>
-      <p><strong>Uniquement si :</strong> Performance critique (60fps, 3D, AR/VR, audio temps réel), Intégration OS profonde (widgets, Live Activities, WatchOS, HealthKit), Sécurité maximale (banque, santé, gov), Équipe dédiée par plateforme (budget > 25M FCFA).</p>
+      <p><strong>Uniquement si :</strong> Performance critique (60fps, 3D, AR/VR, audio temps réel), Intégration OS profonde (widgets, Live Activities, WatchOS, HealthKit), Sécurité maximale (banque, santé, gov), Équipe dédiée par plateforme (budget important).</p>
     `,
   }
   return contents[slug] || '<p>Contenu en cours de rédaction...</p>'
