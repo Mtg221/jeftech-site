@@ -10,6 +10,7 @@ import CtaBand from './sections/CtaBand.jsx'
 import Contact from './sections/Contact.jsx'
 import Booking from './sections/Booking.jsx'
 import Blog from './pages/Blog.jsx'
+import BlogPost from './pages/BlogPost.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
             </>
           )} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
       </main>
       <Footer />

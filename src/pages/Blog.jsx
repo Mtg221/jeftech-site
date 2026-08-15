@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import useReveal from '../hooks/useReveal.js'
 import { Calendar, Tag, Clock, ArrowRight, ExternalLink } from 'lucide-react'
 
-const BLOG_POSTS = [
+export const BLOG_POSTS = [
   {
     slug: 'cout-site-web-senegal',
     title: "Combien coûte la création d'un site web au Sénégal en 2026 ?",
