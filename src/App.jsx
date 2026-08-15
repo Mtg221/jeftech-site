@@ -13,11 +13,18 @@ import Blog from './pages/Blog.jsx'
 import BlogPost from './pages/BlogPost.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Footer from './components/Footer.jsx'
+import { useScrollToAnchor } from './hooks/useAnchorNavigation.jsx'
+
+function ScrollToAnchorHandler() {
+  useScrollToAnchor()
+  return null
+}
 
 export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToAnchorHandler />
       <main id="main">
         <Routes>
           <Route path="/" element={(
