@@ -46,70 +46,6 @@ const DELIVERED_PROJECTS = [
     service: 'developpement-web'
   },
   {
-    id: 2,
-    title: 'Foot Vert',
-    category: 'Application Web',
-    client: 'Foot Vert',
-    clientType: 'Gestion de complexes sportifs',
-    problem: 'Digitaliser la réservation de terrains de foot à Dakar : planning temps réel, paiement en ligne, gestion multi-sites, notifications clients.',
-    solution: 'Plateforme web Next.js + Firebase : réservation temps réel, paiement CinetPay, multi-complexes, notifications push/email, dashboard admin, application PWA installable.',
-    tech: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Firebase Auth/Firestore', 'CinetPay', 'PWA', 'Vercel'],
-    features: [
-      'Planning temps réel avec gestion créneaux',
-      'Paiement mobile money + carte à la réservation',
-      'Multi-complexes & multi-terrains',
-      'Notifications SMS/Email/WhatsApp automatiques',
-      'Dashboard admin : planning, CA, taux remplissage',
-      'PWA installable sur mobile (offline-first)'
-    ],
-    results: [
-      'Déploiement 3 complexes sportifs à Dakar',
-      'Réduction no-show de 60% grâce rappels auto',
-      'Gestion 100% digitale sans papier',
-      'Évolutif pour nouveaux complexes'
-    ],
-    image: PROJECT_IMAGES['Foot Vert'],
-    links: {
-      live: 'https://foot-vert.vercel.app/',
-      caseStudy: null
-    },
-    featured: true,
-    year: 2025,
-    service: 'applications-web'
-  },
-  {
-    id: 3,
-    title: 'Senegal Food App',
-    category: 'Application Mobile',
-    client: 'Senegal Food',
-    clientType: 'Livraison de repas',
-    problem: 'Créer une application de commande food locale au Sénégal : restaurants partenaires, paiement mobile money, livraison express, suivi temps réel.',
-    solution: 'App React Native (Expo) + Backend Node.js : catalogue restaurants, panier, paiement Orange Money/Wave, géolocalisation livreurs, notifications push, programme fidélité.',
-    tech: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Firebase', 'Orange Money API', 'Wave API'],
-    features: [
-      'Catalogue restaurants avec filtres (quartier, cuisine, note)',
-      'Paiement Orange Money, Wave, carte sur app',
-      'Suivi livreur temps réel sur carte',
-      'Notifications push : commande, préparation, livraison',
-      'Programme fidélité & parrainage',
-      'Dashboard restaurant : commandes, stats, menu'
-    ],
-    results: [
-      'Lancement bêta : 50+ restaurants Dakar',
-      '1000+ commandes premier mois',
-      'Note 4.7/5 sur stores',
-      'Équipe interne formée pour reprise'
-    ],
-    image: PROJECT_IMAGES['Senegal Food App'],
-    links: {
-      live: 'https://senegal-food-app.vercel.app/',
-      caseStudy: null
-    },
-    featured: true,
-    year: 2025,
-    service: 'applications-mobiles'
-  },
-  {
     id: 4,
     title: 'Ebenora',
     category: 'Site Vitrine',
@@ -213,9 +149,24 @@ const DEMO_PROJECTS = [
     title: 'SmartStock AI',
     category: 'SaaS & Dashboard',
     description: 'Gestion de stock intelligente avec IA: prévisions de demande, alertes automatiques, analytics avancés.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'AI', 'Vercel'],
     image: PROJECT_IMAGES['SmartStock AI'],
     links: { live: 'https://smartstock-ai-topaz.vercel.app/' },
+  },
+  {
+    id: 2,
+    title: 'Foot Vert',
+    category: 'Application Web',
+    description: 'Plateforme web Next.js + Firebase : réservation temps réel de terrains de foot, paiement CinetPay, multi-complexes, notifications push/email, dashboard admin, PWA installable.',
+    image: PROJECT_IMAGES['Foot Vert'],
+    links: { live: 'https://foot-vert.vercel.app/' },
+  },
+  {
+    id: 3,
+    title: 'Senegal Food App',
+    category: 'Application Mobile',
+    description: 'App React Native (Expo) + Backend Node.js : catalogue restaurants, panier, paiement Orange Money/Wave, géolocalisation livreurs, notifications push, programme fidélité, dashboard restaurant.',
+    image: PROJECT_IMAGES['Senegal Food App'],
+    links: { live: 'https://senegal-food-app.vercel.app/' },
   },
 ]
 
