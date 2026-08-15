@@ -1,5 +1,4 @@
 import useReveal from '../hooks/useReveal.js'
-import { ArrowRight, ExternalLink } from 'lucide-react'
 import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 const PROJECT_IMAGES = {
@@ -173,13 +172,6 @@ const DEMO_PROJECTS = [
 function ProjectCard({ project, index, isDemo = false }) {
   const liveUrl = project.links?.live || '#'
 
-  const handleLiveClick = (e) => {
-    if (liveUrl !== '#') {
-      return // Allow default behavior for external links
-    }
-    e.preventDefault()
-  }
-
   return (
     <article
       key={project.id}
@@ -189,45 +181,41 @@ function ProjectCard({ project, index, isDemo = false }) {
       itemScope
       itemType="https://schema.org/CreativeWork"
     >
-      <div className="project-card__image-wrapper">
-        <div
-          className="project-card__image"
-          style={{
-            backgroundImage: `url(${project.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-          itemProp="image"
-          itemscope
-          itemtype="https://schema.org/ImageObject"
-        >
-          <meta itemProp="url" content={project.image} />
-          <meta itemProp="caption" content={project.title} />
-        </div>
-        <div className="project-card__overlay">
-          <span className="project-card__overlay-text">Voir le projet →</span>
-        </div>
-        {project.featured && <span className="project-badge">Projet phare</span>}
-      </div>
-      <div className="project-card__content">
-        <span className="project-card__category" itemProp="genre">{project.category}</span>
-        <h3 className="project-card__title" itemProp="name">{project.title}</h3>
-        <p className="project-card__desc" itemProp="description">{isDemo ? project.description : project.solution}</p>
-        <div style={{ marginTop: '16px' }}>
-          <a
-            href={liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-card__cta"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 600, color: 'var(--blue)' }}
-            onClick={handleLiveClick}
-            itemProp="url"
+      <a
+        href={liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-card__link"
+        itemProp="url"
+        style={{ display: 'block', textDecoration: 'none', color: 'inherit', height: '100%' }}
+      >
+        <div className="project-card__image-wrapper">
+          <div
+            className="project-card__image"
+            style={{
+              backgroundImage: `url(${project.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+            itemProp="image"
+            itemscope
+            itemtype="https://schema.org/ImageObject"
           >
-            Voir en ligne <ExternalLink size={14} strokeWidth={2} />
-          </a>
+            <meta itemProp="url" content={project.image} />
+            <meta itemProp="caption" content={project.title} />
+          </div>
+          <div className="project-card__overlay">
+            <span className="project-card__overlay-text">Voir le projet →</span>
+          </div>
+          {project.featured && <span className="project-badge">Projet phare</span>}
         </div>
-      </div>
+        <div className="project-card__content">
+          <span className="project-card__category" itemProp="genre">{project.category}</span>
+          <h3 className="project-card__title" itemProp="name">{project.title}</h3>
+          <p className="project-card__desc" itemProp="description">{isDemo ? project.description : project.solution}</p>
+        </div>
+      </a>
       {/* Structured data for each project */}
       <script
         type="application/ld+json"
