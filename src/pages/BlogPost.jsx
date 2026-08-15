@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import useReveal from '../hooks/useReveal.js'
 import { Calendar, Clock, ArrowLeft, Tag, Share2 } from 'lucide-react'
 import { BLOG_POSTS } from './Blog.jsx'
@@ -355,8 +355,8 @@ function getPostContent(slug) {
   return contents[slug] || '<p>Contenu en cours de rédaction...</p>'
 }
 
-export default function BlogPost({ match }) {
-  const slug = match.params.slug
+export default function BlogPost() {
+  const { slug } = useParams()
   const post = BLOG_POSTS.find(p => p.slug === slug)
   useReveal()
 
