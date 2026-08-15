@@ -1,5 +1,5 @@
 import useReveal from '../hooks/useReveal.js'
-import { Globe, Smartphone, LayoutDashboard, CreditCard, Server, Settings2, Code2 } from 'lucide-react'
+import { Globe, Smartphone, LayoutDashboard, CreditCard, Server, Settings2, Code2, ArrowRight } from 'lucide-react'
 
 const SERVICES = [
   {
@@ -119,6 +119,7 @@ const SERVICES = [
 ]
 
 function ServiceCard({ service, index }) {
+  const Icon = service.icon
   return (
     <article
       className="svc-card reveal"
@@ -160,8 +161,6 @@ function ServiceCard({ service, index }) {
     </article>
   )
 }
-
-import { ArrowRight } from 'lucide-react'
 
 export default function Services() {
   useReveal()
