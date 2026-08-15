@@ -2,19 +2,19 @@ import { ArrowRight, Zap, ShieldCheck } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section id="top" className="hero">
+    <section id="top" className="hero" aria-labelledby="hero-title">
       <div className="pixel-grid" />
       <div className="hero__glow hero__glow--1" />
       <div className="hero__glow hero__glow--2" />
 
       <div className="container hero__inner">
         <div className="hero__copy">
-          <h1 className="hero__title">
-            Votre idée mérite une vraie <span className="gradient-text">présence digitale.</span>
+          <h1 id="hero-title" className="hero__title">
+            Solutions numériques innovantes pour les entreprises au Sénégal
           </h1>
           <p className="hero__sub">
-            Jëftech conçoit des sites web et applications mobiles qui convertissent,
-            performent et impressionnent.
+            Jëftech accompagne les entreprises sénégalaises dans leur transformation digitale :
+            développement web, applications mobiles, logiciels sur mesure et solutions numériques performantes.
           </p>
           <div className="hero__cta">
             <a className="btn btn-primary" href="#booking">
@@ -29,7 +29,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero__visual">
+        <div className="hero__visual" aria-hidden="true">
           <div className="device device--laptop">
             <div className="device__bar"><i /><i /><i /></div>
             <div className="device__screen">

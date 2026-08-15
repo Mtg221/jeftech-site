@@ -1,0 +1,21 @@
+# robots.txt for Jëftech
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jeftech.dev/sitemap.xml
+
+# Disallow private/admin areas (none currently, but prepared for future)
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Crawl-delay for polite crawling
+Crawl-delay: 10
+
+# Host directive
+Host: https://jeftech.dev
