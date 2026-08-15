@@ -10,9 +10,6 @@ Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /api/
 Disallow: /private/
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
 
 # Crawl-delay for polite crawling
 Crawl-delay: 10

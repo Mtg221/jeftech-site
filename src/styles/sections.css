@@ -201,6 +201,15 @@
 .booking__form .form-msg--err { color: #ff9a9a; }
 .booking__form .form-msg--err a { color: #fff; }
 
+/* FAQ Grid - responsive fix for minmax overflow */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 /* ===== Contact ===== */
 .contact { background: var(--bg-alt); }
 .contact__inner { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: start; }

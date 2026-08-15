@@ -1,5 +1,6 @@
 import useReveal from '../hooks/useReveal.js'
 import { Globe, Smartphone, LayoutDashboard, CreditCard, Server, Settings2, Code2, ArrowRight } from 'lucide-react'
+import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 const SERVICES = [
   {
@@ -120,6 +121,13 @@ const SERVICES = [
 
 function ServiceCard({ service, index }) {
   const Icon = service.icon
+  const { navigateToAnchor } = useAnchorNavigation()
+
+  const handleCtaClick = (e) => {
+    e.preventDefault()
+    navigateToAnchor(service.ctaHref)
+  }
+
   return (
     <article
       className="svc-card reveal"
@@ -143,6 +151,7 @@ function ServiceCard({ service, index }) {
       <a
         className="svc-card__link"
         href={service.ctaHref}
+        onClick={handleCtaClick}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -164,6 +173,7 @@ function ServiceCard({ service, index }) {
 
 export default function Services() {
   useReveal()
+  const { navigateToAnchor } = useAnchorNavigation()
   return (
     <section id="services" className="section-pad services" aria-labelledby="services-title">
       <div className="container">
@@ -180,7 +190,15 @@ export default function Services() {
         </div>
 
         <div className="services__cta reveal" style={{ textAlign: 'center', marginTop: '48px' }}>
-          <a className="btn btn-outline" href="#booking" style={{ fontSize: '16px', padding: '16px 32px' }}>
+          <a
+            className="btn btn-outline"
+            href="#booking"
+            onClick={(e) => {
+              e.preventDefault()
+              navigateToAnchor('#booking')
+            }}
+            style={{ fontSize: '16px', padding: '16px 32px' }}
+          >
             Besoin d'un service sur mesure ? Parlons-en
           </a>
         </div>

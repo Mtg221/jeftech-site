@@ -1,7 +1,9 @@
 import useReveal from '../hooks/useReveal.js'
+import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 export default function CtaBand() {
   useReveal()
+  const { navigateToAnchor } = useAnchorNavigation()
   return (
     <section className="cta-band">
       <div className="container cta-band__inner reveal">
@@ -10,7 +12,16 @@ export default function CtaBand() {
           Pas de portfolio client encore mais une équipe technique sérieuse, motivée,
           et prête à tout donner sur votre projet.
         </p>
-        <a className="btn cta-band__btn" href="#booking">Réserver un appel gratuit</a>
+        <a
+          className="btn cta-band__btn"
+          href="#booking"
+          onClick={(e) => {
+            e.preventDefault()
+            navigateToAnchor('#booking')
+          }}
+        >
+          Réserver un appel gratuit
+        </a>
       </div>
     </section>
   )

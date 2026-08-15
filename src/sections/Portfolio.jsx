@@ -1,5 +1,6 @@
 import useReveal from '../hooks/useReveal.js'
 import { ArrowRight, Check, ExternalLink } from 'lucide-react'
+import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 const PROJECT_IMAGES = {
   'Ebenora': 'https://res.cloudinary.com/dm9iz5eqf/image/upload/v1785279244/Screenshot_2026-07-28_at_22.53.16_jpcpqu.png',
@@ -220,7 +221,19 @@ const DEMO_PROJECTS = [
 
 function ProjectCard({ project, index, isDemo = false }) {
   const liveUrl = project.links?.live || '#'
-  const serviceSlug = project.service ? `/services/${project.service}` : '#services'
+  const { navigateToAnchor } = useAnchorNavigation()
+
+  const handleLiveClick = (e) => {
+    if (liveUrl !== '#') {
+      return // Allow default behavior for external links
+    }
+    e.preventDefault()
+  }
+
+  const handleServiceClick = (e) => {
+    e.preventDefault()
+    navigateToAnchor('#services')
+  }
 
   return (
     <article
@@ -231,59 +244,70 @@ function ProjectCard({ project, index, isDemo = false }) {
       itemScope
       itemType="https://schema.org/CreativeWork"
     >
-      <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-card__link">
-        <div className="project-card__image-wrapper">
-          <div
-            className="project-card__image"
-            style={{
-              backgroundImage: `url(${project.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-            itemProp="image"
-            itemscope
-            itemtype="https://schema.org/ImageObject"
+      <div className="project-card__image-wrapper">
+        <div
+          className="project-card__image"
+          style={{
+            backgroundImage: `url(${project.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+          itemProp="image"
+          itemscope
+          itemtype="https://schema.org/ImageObject"
+        >
+          <meta itemProp="url" content={project.image} />
+          <meta itemProp="caption" content={project.title} />
+        </div>
+        <div className="project-card__overlay">
+          <span className="project-card__overlay-text">Voir le projet →</span>
+        </div>
+        {project.featured && <span className="project-badge">Projet phare</span>}
+      </div>
+      <div className="project-card__content">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+          <span className="project-card__category" itemProp="genre">{project.category}</span>
+          {project.year && <span style={{ fontSize: '12px', color: 'var(--gray-dim)' }}>{project.year}</span>}
+        </div>
+        <h3 className="project-card__title" itemProp="name">{project.title}</h3>
+        {project.client && (
+          <p className="project-card__client" style={{ fontSize: '13px', color: 'var(--blue)', fontWeight: 500, marginBottom: '8px' }}>
+            Client : {project.client} <span style={{ color: 'var(--gray-dim)', fontWeight: 400 }}>({project.clientType})</span>
+          </p>
+        )}
+        <p className="project-card__desc" itemProp="description">{isDemo ? project.description : project.solution}</p>
+        {!isDemo && project.tech && (
+          <div className="project-card__tech" style={{ marginTop: '12px', marginBottom: '16px' }}>
+            {project.tech.map((t) => (
+              <span key={t} className="tech-tag">{t}</span>
+            ))}
+          </div>
+        )}
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card__cta"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 600, color: 'var(--blue)' }}
+            onClick={handleLiveClick}
+            itemProp="url"
           >
-            <meta itemProp="url" content={project.image} />
-            <meta itemProp="caption" content={project.title} />
-          </div>
-          <div className="project-card__overlay">
-            <span className="project-card__overlay-text">Voir le projet →</span>
-          </div>
-          {project.featured && <span className="project-badge">Projet phare</span>}
-        </div>
-        <div className="project-card__content">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-            <span className="project-card__category" itemProp="genre">{project.category}</span>
-            {project.year && <span style={{ fontSize: '12px', color: 'var(--gray-dim)' }}>{project.year}</span>}
-          </div>
-          <h3 className="project-card__title" itemProp="name">{project.title}</h3>
-          {project.client && (
-            <p className="project-card__client" style={{ fontSize: '13px', color: 'var(--blue)', fontWeight: 500, marginBottom: '8px' }}>
-              Client : {project.client} <span style={{ color: 'var(--gray-dim)', fontWeight: 400 }}>({project.clientType})</span>
-            </p>
-          )}
-          <p className="project-card__desc" itemProp="description">{isDemo ? project.description : project.solution}</p>
-          {!isDemo && project.tech && (
-            <div className="project-card__tech" style={{ marginTop: '12px', marginBottom: '16px' }}>
-              {project.tech.map((t) => (
-                <span key={t} className="tech-tag">{t}</span>
-              ))}
-            </div>
-          )}
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-card__cta" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 600, color: 'var(--blue)' }}>
-              Voir en ligne <ExternalLink size={14} strokeWidth={2} />
+            Voir en ligne <ExternalLink size={14} strokeWidth={2} />
+          </a>
+          {!isDemo && project.service && (
+            <a
+              href="#services"
+              className="project-card__service-link"
+              style={{ fontSize: '13px', color: 'var(--gray)', textDecoration: 'underline', textUnderlineOffset: '2px' }}
+              onClick={handleServiceClick}
+            >
+              Service : {project.service.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
             </a>
-            {!isDemo && project.service && (
-              <a href={serviceSlug} className="project-card__service-link" style={{ fontSize: '13px', color: 'var(--gray)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>
-                Service : {project.service.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
-              </a>
-            )}
-          </div>
+          )}
         </div>
-      </a>
+      </div>
       {/* Structured data for each project */}
       <script
         type="application/ld+json"
@@ -317,6 +341,7 @@ function ProjectCard({ project, index, isDemo = false }) {
 
 function ProjectSection({ title, subtitle, projects, id, eyebrow, isDemo = false }) {
   useReveal()
+  const { navigateToAnchor } = useAnchorNavigation()
   return (
     <section id={id} className="section-pad portfolio" aria-labelledby={`${id}-title`}>
       <div className="container">
@@ -334,7 +359,15 @@ function ProjectSection({ title, subtitle, projects, id, eyebrow, isDemo = false
 
         {!isDemo && (
           <div className="portfolio__cta reveal" style={{ textAlign: 'center', marginTop: '48px' }}>
-            <a className="btn btn-outline" href="#booking" style={{ fontSize: '16px', padding: '16px 32px' }}>
+            <a
+              className="btn btn-outline"
+              href="#booking"
+              onClick={(e) => {
+                e.preventDefault()
+                navigateToAnchor('#booking')
+              }}
+              style={{ fontSize: '16px', padding: '16px 32px' }}
+            >
               Vous avez un projet similaire ? Parlons-en
             </a>
           </div>

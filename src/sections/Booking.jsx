@@ -4,7 +4,17 @@ import useReveal from '../hooks/useReveal.js'
 import { Mail, Check, CalendarDays, HelpCircle } from 'lucide-react'
 import { IconWa, IconIn } from '../components/Icons.jsx'
 
-const SLOTS = ['09:00', '10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00']
+const SLOTS = [
+  { value: '09:00', label: '09:00' },
+  { value: '10:00', label: '10:00' },
+  { value: '11:00', label: '11:00' },
+  { value: '12:00', label: '12:00' },
+  { value: '14:00', label: '14:00' },
+  { value: '15:00', label: '15:00' },
+  { value: '16:00', label: '16:00' },
+  { value: '17:00', label: '17:00' },
+  { value: '18:00', label: '18:00' },
+]
 
 const PERKS = [
   'Réponse sous 24 h',
@@ -132,10 +142,10 @@ export default function Booking() {
                 <input type="date" name="date" required min={today} />
               </label>
               <label className="bk-field">
-                <span>Heure souhaitée</span>
+                <span>Créneau souhaité</span>
                 <select name="time" required defaultValue="">
                   <option value="" disabled>Choisir…</option>
-                  {SLOTS.map((t) => <option key={t} value={t}>{t}</option>)}
+                  {SLOTS.map((slot) => <option key={slot.value} value={slot.value}>{slot.label}</option>)}
                 </select>
               </label>
             </div>
@@ -170,7 +180,7 @@ export default function Booking() {
           <span className="eyebrow">Questions fréquentes</span>
           <h3 className="section-title" style={{ fontSize: 'clamp(24px,3vw,32px)' }}>Questions sur nos rendez-vous</h3>
         </div>
-        <div className="faq-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', maxWidth: '900px', margin: '0 auto' }}>
+        <div className="faq-grid">
           {FAQ.map((faq, i) => (
             <details key={i} className="faq-item reveal" style={{
               background: '#fff',

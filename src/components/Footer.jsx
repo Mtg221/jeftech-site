@@ -1,21 +1,47 @@
+import { useLocation } from 'react-router-dom'
 import Wordmark from './Wordmark.jsx'
 import { NAV_LINKS, SOCIALS } from '../config.js'
 import { IconIn, IconIg, IconWa, IconFb, IconX } from './Icons.jsx'
+import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 export default function Footer() {
+  const location = useLocation()
+  const { navigateToAnchor } = useAnchorNavigation()
+
+  const handleNavClick = (href) => {
+    navigateToAnchor(href)
+  }
+
   return (
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <a href="#top" className="footer__logo">
+          <a href="#top" className="footer__logo" onClick={(e) => {
+            e.preventDefault()
+            navigateToAnchor('#top')
+          }}>
             <img src="/logo.png" alt="Jëftech" />
             <Wordmark size={22} />
           </a>
         </div>
 
-        <nav className="footer__links">
-          <a href="#top">Accueil</a>
-          {NAV_LINKS.map((l) => <a key={l.href} href={l.href}>{l.label}</a>)}
+        <nav className="footer__links" aria-label="Liens de navigation">
+          <a href="#top" onClick={(e) => {
+            e.preventDefault()
+            navigateToAnchor('#top')
+          }}>Accueil</a>
+          {NAV_LINKS.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={(e) => {
+                e.preventDefault()
+                handleNavClick(l.href)
+              }}
+            >
+              {l.label}
+            </a>
+          ))}
         </nav>
 
         <div className="footer__social">

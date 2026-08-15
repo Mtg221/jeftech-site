@@ -2,81 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useReveal from '../hooks/useReveal.js'
 import { Calendar, Tag, Clock, ArrowRight, ExternalLink } from 'lucide-react'
-
-export const BLOG_POSTS = [
-  {
-    slug: 'cout-site-web-senegal',
-    title: "Combien coûte la création d'un site web au Sénégal en 2026 ?",
-    description: "Guide complet des tarifs pour créer un site web au Sénégal : site vitrine, e-commerce, SaaS. Facteurs de prix, pièges à éviter et retour sur investissement.",
-    date: '2026-01-15',
-    author: 'Jëftech',
-    category: 'Développement Web',
-    tags: ['site web', 'tarifs', 'Sénégal', 'budget', 'e-commerce', 'ROI'],
-    readTime: '12 min',
-    featured: true,
-    image: '/blog/images/cout-site-web-senegal.jpg'
-  },
-  {
-    slug: 'choisir-agence-web-senegal',
-    title: 'Comment choisir une agence de développement web au Sénégal ?',
-    description: '7 critères essentiels pour sélectionner la bonne agence web à Dakar : portfolio, expertise technique, processus, transparence, maintenance, avis clients, feeling.',
-    date: '2026-01-22',
-    author: 'Jëftech',
-    category: 'Conseil',
-    tags: ['agence web', 'choix', 'Sénégal', 'Dakar', 'critères', 'portfolio'],
-    readTime: '10 min',
-    featured: true,
-    image: '/blog/images/choisir-agence-web-senegal.jpg'
-  },
-  {
-    slug: 'cout-application-mobile-senegal',
-    title: "Combien coûte le développement d'une application mobile au Sénégal ?",
-    description: 'Tarifs 2026 pour créer une app mobile au Sénégal : native vs cross-platform, fonctionnalités, backend, stores. Guide complet avec exemples réels.',
-    date: '2026-02-01',
-    author: 'Jëftech',
-    category: 'Applications Mobiles',
-    tags: ['application mobile', 'tarifs', 'Sénégal', 'React Native', 'iOS', 'Android', 'budget'],
-    readTime: '11 min',
-    featured: false,
-    image: '/blog/images/cout-application-mobile-senegal.jpg'
-  },
-  {
-    slug: 'digitaliser-pme-senegal',
-    title: 'Comment digitaliser une PME sénégalaise en 2026 ?',
-    description: 'Guide pratique pour la transformation digitale des PME au Sénégal : audit, priorités, outils, budget, erreurs à éviter. Méthode étape par étape.',
-    date: '2026-02-10',
-    author: 'Jëftech',
-    category: 'Transformation Digitale',
-    tags: ['transformation digitale', 'PME', 'Sénégal', 'digitalisation', 'stratégie', 'outils'],
-    readTime: '14 min',
-    featured: true,
-    image: '/blog/images/digitaliser-pme-senegal.jpg'
-  },
-  {
-    slug: 'logiciel-sur-mesure-entreprise',
-    title: 'Pourquoi utiliser un logiciel sur mesure pour son entreprise ?',
-    description: "Avantages du logiciel sur mesure vs SaaS standard : adaptation métier, propriété, scalabilité, intégration, ROI long terme. Quand choisir le sur-mesure.",
-    date: '2026-02-18',
-    author: 'Jëftech',
-    category: 'Logiciels sur Mesure',
-    tags: ['logiciel sur mesure', 'SaaS', 'entreprise', 'ROI', 'développement', 'automatisation'],
-    readTime: '10 min',
-    featured: false,
-    image: '/blog/images/logiciel-sur-mesure-entreprise.jpg'
-  },
-  {
-    slug: 'application-web-vs-mobile',
-    title: 'Application web ou application mobile : laquelle choisir ?',
-    description: 'Différences entre web app, PWA, app native, hybride. Critères de choix : budget, fonctionnalités, audience, maintenance. Guide de décision avec matrice.',
-    date: '2026-02-25',
-    author: 'Jëftech',
-    category: 'Conseil Technique',
-    tags: ['application web', 'application mobile', 'PWA', 'React Native', 'choix', 'architecture'],
-    readTime: '12 min',
-    featured: false,
-    image: '/blog/images/web-vs-mobile-app.jpg'
-  }
-]
+import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
+import { BLOG_POSTS } from '../data/blog-posts.js'
 
 function formatDate(dateStr) {
   const date = new Date(dateStr)
@@ -132,6 +59,8 @@ function BlogCard({ post }) {
 
 export default function Blog() {
   useReveal()
+  const { navigateToAnchor } = useAnchorNavigation()
+
   return (
     <section id="blog" className="section-pad blog-page" aria-labelledby="blog-title">
       <div className="container">
@@ -154,7 +83,16 @@ export default function Blog() {
           <p style={{ color: 'var(--gray)', marginBottom: '16px' }}>
             Vous voulez être notifié des prochains articles ?
           </p>
-          <a href="#contact" className="btn btn-outline">S'inscrire à la newsletter</a>
+          <a
+            href="#booking"
+            className="btn btn-outline"
+            onClick={(e) => {
+              e.preventDefault()
+              navigateToAnchor('#booking')
+            }}
+          >
+            Réserver un appel pour en discuter
+          </a>
         </div>
       </div>
     </section>

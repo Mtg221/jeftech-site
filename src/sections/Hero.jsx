@@ -1,6 +1,9 @@
 import { ArrowRight, Zap, ShieldCheck } from 'lucide-react'
+import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 export default function Hero() {
+  const { navigateToAnchor } = useAnchorNavigation()
+
   return (
     <section id="top" className="hero" aria-labelledby="hero-title">
       <div className="pixel-grid" />
@@ -17,10 +20,26 @@ export default function Hero() {
             développement web, applications mobiles, logiciels sur mesure et solutions numériques performantes.
           </p>
           <div className="hero__cta">
-            <a className="btn btn-primary" href="#booking">
+            <a
+              className="btn btn-primary"
+              href="#booking"
+              onClick={(e) => {
+                e.preventDefault()
+                navigateToAnchor('#booking')
+              }}
+            >
               Réserver un appel gratuit <ArrowRight size={18} strokeWidth={2} />
             </a>
-            <a className="btn btn-outline" href="#services">Voir nos services</a>
+            <a
+              className="btn btn-outline"
+              href="#services"
+              onClick={(e) => {
+                e.preventDefault()
+                navigateToAnchor('#services')
+              }}
+            >
+              Voir nos services
+            </a>
           </div>
           <div className="hero__trust">
             <div><strong>4</strong><span>Experts polyvalents</span></div>

@@ -2,6 +2,7 @@ import useReveal from '../hooks/useReveal.js'
 import { Zap, Code2, Headphones, Users, Target, ShieldCheck } from 'lucide-react'
 import { IconIn, IconIg, IconWa, IconFb, IconX } from '../components/Icons.jsx'
 import { SOCIALS } from '../config.js'
+import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 const VALUES = [
   {
@@ -80,6 +81,7 @@ const TEAM = [
 
 export default function About() {
   useReveal()
+  const { navigateToAnchor } = useAnchorNavigation()
   return (
     <section id="about" className="section-pad about" aria-labelledby="about-title">
       <div className="pixel-grid" />
@@ -171,7 +173,15 @@ export default function About() {
           <p style={{ color: '#c3ccec', fontSize: '18px', maxWidth: '600px', margin: '0 auto 32px' }}>
             Échangeons gratuitement sur vos besoins. 30 minutes, sans engagement, conseils concrets.
           </p>
-          <a href="#booking" className="btn btn-primary" style={{ fontSize: '16px', padding: '16px 32px' }}>
+          <a
+            href="#booking"
+            className="btn btn-primary"
+            style={{ fontSize: '16px', padding: '16px 32px' }}
+            onClick={(e) => {
+              e.preventDefault()
+              navigateToAnchor('#booking')
+            }}
+          >
             Réserver un appel gratuit
           </a>
         </div>

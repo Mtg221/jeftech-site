@@ -1,7 +1,8 @@
 import { Link, useParams } from 'react-router-dom'
 import useReveal from '../hooks/useReveal.js'
 import { Calendar, Clock, ArrowLeft, Tag, Share2 } from 'lucide-react'
-import { BLOG_POSTS } from './Blog.jsx'
+import { BLOG_POSTS } from '../data/blog-posts.js'
+import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 function formatDate(dateStr) {
   const date = new Date(dateStr)
@@ -359,6 +360,7 @@ export default function BlogPost() {
   const { slug } = useParams()
   const post = BLOG_POSTS.find(p => p.slug === slug)
   useReveal()
+  const { navigateToAnchor } = useAnchorNavigation()
 
   if (!post) {
     return (
@@ -457,9 +459,17 @@ export default function BlogPost() {
           <p style={{ color: 'var(--gray)', marginBottom: '24px', maxWidth: '500px', margin: '0 auto 24px' }}>
             On en discute gratuitement. 30 min, sans engagement, conseils concrets.
           </p>
-          <Link to="#booking" className="btn btn-primary" style={{ display: 'inline-block' }}>
+          <a
+            href="#booking"
+            className="btn btn-primary"
+            style={{ display: 'inline-block' }}
+            onClick={(e) => {
+              e.preventDefault()
+              navigateToAnchor('#booking')
+            }}
+          >
             Réserver un appel
-          </Link>
+          </a>
         </div>
       </div>
     </article>

@@ -144,7 +144,7 @@ export default function Contact() {
           <span className="eyebrow">Questions fréquentes</span>
           <h3 className="section-title" style={{ fontSize: 'clamp(24px,3vw,32px)' }}>Questions sur nos services</h3>
         </div>
-        <div className="faq-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', maxWidth: '900px', margin: '0 auto' }}>
+        <div className="faq-grid">
           {CONTACT_FAQ.map((faq, i) => (
             <details key={i} className="faq-item reveal" style={{
               background: '#fff',

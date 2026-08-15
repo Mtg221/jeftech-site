@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Hero from './sections/Hero.jsx'
 import Services from './sections/Services.jsx'
@@ -11,6 +11,7 @@ import Contact from './sections/Contact.jsx'
 import Booking from './sections/Booking.jsx'
 import Blog from './pages/Blog.jsx'
 import BlogPost from './pages/BlogPost.jsx'
+import NotFound from './pages/NotFound.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
           )} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

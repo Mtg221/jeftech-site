@@ -1,0 +1,13 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0F2C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A56FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="280" r="80" fill="none" stroke="#1A56FF" stroke-width="3" opacity="0.3"/>
+  <circle cx="600" cy="280" r="50" fill="#1A56FF" opacity="0.9"/>
+  <text x="600" y="440" font-family="system-ui, sans-serif" font-size="42" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.05em">JËFTECH</text>
+  <text x="600" y="490" font-family="system-ui, sans-serif" font-size="22" fill="#fff" text-anchor="middle" opacity="0.8">Solutions numériques au Sénégal</text>
+</svg>
