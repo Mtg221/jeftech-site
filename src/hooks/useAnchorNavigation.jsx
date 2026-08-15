@@ -5,11 +5,18 @@ export function useAnchorNavigation() {
   const navigate = useNavigate()
   const location = useLocation()
 
-  const navigateToAnchor = useCallback((anchor) => {
-    const hash = anchor.startsWith('#') ? anchor : `#${anchor}`
+  const navigateToAnchor = useCallback((href) => {
+    // If it's a route (starts with /), use React Router navigation
+    if (href.startsWith('/')) {
+      navigate(href)
+      return
+    }
+
+    // Otherwise it's an anchor link (#services, #booking, etc.)
+    const hash = href.startsWith('#') ? href : `#${href}`
 
     if (location.pathname === '/') {
-      const element = document.getElementById(anchor.replace('#', ''))
+      const element = document.getElementById(hash.replace('#', ''))
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
       } else {

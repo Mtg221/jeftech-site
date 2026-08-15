@@ -1,5 +1,5 @@
 import useReveal from '../hooks/useReveal.js'
-import { ArrowRight, Check, ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import { useAnchorNavigation } from '../hooks/useAnchorNavigation.jsx'
 
 const PROJECT_IMAGES = {
@@ -221,18 +221,12 @@ const DEMO_PROJECTS = [
 
 function ProjectCard({ project, index, isDemo = false }) {
   const liveUrl = project.links?.live || '#'
-  const { navigateToAnchor } = useAnchorNavigation()
 
   const handleLiveClick = (e) => {
     if (liveUrl !== '#') {
       return // Allow default behavior for external links
     }
     e.preventDefault()
-  }
-
-  const handleServiceClick = (e) => {
-    e.preventDefault()
-    navigateToAnchor('#services')
   }
 
   return (
@@ -266,25 +260,10 @@ function ProjectCard({ project, index, isDemo = false }) {
         {project.featured && <span className="project-badge">Projet phare</span>}
       </div>
       <div className="project-card__content">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-          <span className="project-card__category" itemProp="genre">{project.category}</span>
-          {project.year && <span style={{ fontSize: '12px', color: 'var(--gray-dim)' }}>{project.year}</span>}
-        </div>
+        <span className="project-card__category" itemProp="genre">{project.category}</span>
         <h3 className="project-card__title" itemProp="name">{project.title}</h3>
-        {project.client && (
-          <p className="project-card__client" style={{ fontSize: '13px', color: 'var(--blue)', fontWeight: 500, marginBottom: '8px' }}>
-            Client : {project.client} <span style={{ color: 'var(--gray-dim)', fontWeight: 400 }}>({project.clientType})</span>
-          </p>
-        )}
         <p className="project-card__desc" itemProp="description">{isDemo ? project.description : project.solution}</p>
-        {!isDemo && project.tech && (
-          <div className="project-card__tech" style={{ marginTop: '12px', marginBottom: '16px' }}>
-            {project.tech.map((t) => (
-              <span key={t} className="tech-tag">{t}</span>
-            ))}
-          </div>
-        )}
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+        <div style={{ marginTop: '16px' }}>
           <a
             href={liveUrl}
             target="_blank"
@@ -296,16 +275,6 @@ function ProjectCard({ project, index, isDemo = false }) {
           >
             Voir en ligne <ExternalLink size={14} strokeWidth={2} />
           </a>
-          {!isDemo && project.service && (
-            <a
-              href="#services"
-              className="project-card__service-link"
-              style={{ fontSize: '13px', color: 'var(--gray)', textDecoration: 'underline', textUnderlineOffset: '2px' }}
-              onClick={handleServiceClick}
-            >
-              Service : {project.service.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
-            </a>
-          )}
         </div>
       </div>
       {/* Structured data for each project */}
@@ -321,7 +290,6 @@ function ProjectCard({ project, index, isDemo = false }) {
             "creator": {
               "@id": "https://jeftech.dev/#organization"
             },
-            "dateCreated": `${project.year || 2024}-01-01`,
             "image": project.image,
             "url": liveUrl,
             "about": {
@@ -330,8 +298,7 @@ function ProjectCard({ project, index, isDemo = false }) {
               "provider": {
                 "@id": "https://jeftech.dev/#organization"
               }
-            },
-            ...(project.tech && { "keywords": project.tech.join(', ') })
+            }
           })
         }}
       />
